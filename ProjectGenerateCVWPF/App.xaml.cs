@@ -1,0 +1,128 @@
+﻿using Org.BouncyCastle.Bcpg;
+using ProjectGenerateCVWPF.Data;
+using ProjectGenerateCVWPF.Pages;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Data;
+using System.IO;
+using System.Windows;
+
+namespace ProjectGenerateCVWPF
+{
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+        public static MainWindow? main;
+        public static TemplateMenuUserControl templateMenu = new TemplateMenuUserControl();
+        public static int maxSkill = 0;
+        internal static Data.ViewModel sampleViewModel;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            main = new MainWindow();
+            sampleViewModel = new ViewModel()
+            {
+                Profile = new ProfileInformation()
+                {
+                    Name = "Phen Makara",
+                    Phone = "012 345 678",
+                    Email = "sothea.chanrith@gmail.com",
+                    CurrentPlace = "Khan Chbar Ampov, Phnom Penh",
+                    Nationality = "Khmer",
+                    Gender = "Male",
+                    CustomGender = new ObservableCollection<string>()
+                    {
+                        "Male",
+                        "Female"
+                    },
+                    PlaceofBirth = "Prey Veng Commune, Prey Veng District, Prey Veng Province",
+                    MaritalState = "Married",
+                    ImagePath = "pack://application:,,,/Images/default_photo.jpg"
+                },
+            };
+
+            sampleViewModel.Educations.Add(new Data.Educations()
+            {
+                SchoolName = "Institute of Technology of Cambodia",
+                StartYear = "2018",
+                EndYear = "2022",
+                MajorName = "Computer Science"
+            });
+            sampleViewModel.Educations.Add(new Data.Educations()
+            {
+                SchoolName = "Phnom Penh International University",
+                StartYear = "2019",
+                EndYear = "2023",
+                MajorName = "Business Administration"
+            });
+
+            sampleViewModel.Languages.Add(new Data.Languages()
+            {
+                Name = "French",
+                Level = "Good"
+            });
+            sampleViewModel.Languages.Add(new Data.Languages()
+            {
+                Name = "Khmer",
+                Level = "Very Good"
+            });
+
+            sampleViewModel.Hobbies.Add(new Data.Hobbies()
+            {
+                Name = "Cycling"
+            });
+            sampleViewModel.Hobbies.Add(new Data.Hobbies()
+            {
+                Name = "Photography"
+            });
+            sampleViewModel.Hobbies.Add(new Data.Hobbies()
+            {
+                Name = "Traveling"
+            });
+
+            sampleViewModel.WorkExperiences.Add(new Data.WorkExperiences()
+            {
+                JobName = "Software Developer",
+                StartYear = "2021",
+                EndYear = "Present",
+                Responsibility = "Blue Lotus Technology",
+                JobDescription = "Design and implement software solutions using JavaScript, Python, and Django. Collaborate with cross-functional teams to deliver scalable applications."
+            });
+
+            sampleViewModel.WorkExperiences.Add(new Data.WorkExperiences()
+            {
+                JobName = "IT Support Specialist",
+                StartYear = "2019",
+                EndYear = "2021",
+                Responsibility = "MegaCorp Solutions",
+                JobDescription = "Provided technical support for company-wide hardware and software issues. Assisted in network troubleshooting and maintenance."
+            });
+
+            sampleViewModel.References.Add(new Data.References()
+            {
+                Name = "Malis Phanith",
+                Company = "TechBright Solutions/CTO",
+                Phone = "Phone: 016-789-1234",
+                Email = "Email: malis.phanith@techbright.com"
+            });
+
+            sampleViewModel.References.Add(new Data.References()
+            {
+                Name = "Visal Sok",
+                Company = "InnovateX/Project Manager",
+                Phone = "Phone: 023-456-7890",
+                Email = "Email: visal.sok@innovatex.com"
+            });
+            main.Show();
+        }
+
+        public App()
+        {
+            Directory.CreateDirectory("Profiles");
+            Directory.CreateDirectory("Images"); 
+        }
+    }
+
+}

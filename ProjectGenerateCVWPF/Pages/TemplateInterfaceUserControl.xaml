@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="ProjectGenerateCVWPF.Pages.TemplateInterfaceUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="149"
+    Height="180"
+    Margin="15,15,0,0"
+    Background="Transparent"
+    MouseLeftButtonDown="UserControl_MouseLeftButtonDown"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style x:Key="borderHover" TargetType="Border">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="2" />
+                    <Setter Property="BorderBrush" Value="{StaticResource textColor}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Border
+        Background="{StaticResource appBackground}"
+        CornerRadius="10"
+        Style="{StaticResource borderHover}">
+        <StackPanel>
+            <Border
+                x:Name="imageDisplay"
+                Width="90"
+                Height="100"
+                Margin="0,20"
+                CornerRadius="7" />
+            <TextBlock
+                x:Name="txtTitle"
+                FontSize="15"
+                FontFamily="{StaticResource Segoe UI}"
+                FontWeight="Light"
+                TextAlignment="Center" />
+        </StackPanel>
+    </Border>
+</UserControl>

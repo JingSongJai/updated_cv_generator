@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Menu Color-->
+    <SolidColorBrush x:Key="menuClick" Color="#5d60ef"/>
+    <SolidColorBrush x:Key="menuText" Color="White"/>
+    <SolidColorBrush x:Key="defaultText" Color="Gray"/>
+    <SolidColorBrush x:Key="cvText" Color="White"/>
+    <SolidColorBrush x:Key="cvText1" Color="Black"/>
+    <SolidColorBrush x:Key="cvText3" Color="#101945"/>
+    
+    <!--Application Area-->
+    <SolidColorBrush x:Key="appBackground" Color="#ffffff"/>
+    <SolidColorBrush x:Key="displayBackground" Color="#f4f8f9"/>
+    <SolidColorBrush x:Key="textColor" Color="#673ab7"/>
+    
+    <!--Button Color-->
+    <SolidColorBrush x:Key="btnColor1" Color="#101945"/>
+    <SolidColorBrush x:Key="btnColor2" Color="#01a3fe"/>
+    <SolidColorBrush x:Key="btnColor3" Color="#daf0fa"/>
+    <SolidColorBrush x:Key="btnColor4" Color="#ff5264"/>
+</ResourceDictionary>

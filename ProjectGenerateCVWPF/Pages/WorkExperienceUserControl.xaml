@@ -1,0 +1,290 @@
+﻿<UserControl
+    x:Class="ProjectGenerateCVWPF.Pages.WorkExperienceUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="630"
+    d:DesignWidth="420"
+    Loaded="UserControl_Loaded"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style x:Key="btnAdd" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="borderBackground"
+                            Height="40"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                ContentSource="Content" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="{StaticResource btnColor1}" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnRemove" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="borderBackground"
+                            Width="80"
+                            Height="40"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                ContentSource="Content" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Border
+        Padding="5"
+        Background="{StaticResource cvText}"
+        CornerRadius="0 15 15 15">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="55" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="70" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Margin="5,0"
+                        VerticalAlignment="Center"
+                        FontFamily="{StaticResource Segoe UI}"
+                        FontSize="24"
+                        FontWeight="SemiBold"
+                        Foreground="{StaticResource btnColor1}"
+                        Text="Work Experience" />
+                    <Button
+                        x:Name="btnAdd"
+                        Grid.Column="1"
+                        Width="40"
+                        HorizontalAlignment="Center"
+                        Background="{StaticResource btnColor2}"
+                        Click="btnAdd_Click"
+                        Content="+"
+                        FontSize="30"
+                        Foreground="{StaticResource cvText}"
+                        Style="{StaticResource btnAdd}" />
+                </Grid>
+
+                <Border
+                    x:Name="borderDisplay"
+                    Grid.Row="1"
+                    Margin="10"
+                    Padding="10"
+                    BorderBrush="{StaticResource defaultText}"
+                    BorderThickness="0.5"
+                    CornerRadius="5"
+                    Visibility="Collapsed">
+                    <StackPanel>
+                        <Grid Margin="0,0,0,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <TextBox
+                                x:Name="tbJobName"
+                                Grid.ColumnSpan="2"
+                                Style="{StaticResource tbJobName}"
+                                Tag="Job Name" />
+                            <TextBox
+                                x:Name="tbResponsible"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Style="{StaticResource tbPosition}"
+                                Tag="Responsbility" />
+                            <TextBox
+                                x:Name="tbDescription"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2"
+                                Height="100"
+                                AcceptsReturn="True"
+                                Style="{StaticResource tbInformation}"
+                                Tag="Job Description"
+                                TextWrapping="Wrap" />
+                            <TextBox
+                                x:Name="tbStartYear"
+                                Grid.Row="3"
+                                PreviewTextInput="tbStartYear_PreviewTextInput"
+                                Style="{StaticResource tbDate}"
+                                Tag="Start Year" />
+                            <TextBox
+                                x:Name="tbEndYear"
+                                Grid.Row="3"
+                                Grid.Column="2"
+                                PreviewTextInput="tbStartYear_PreviewTextInput"
+                                Style="{StaticResource tbDate}"
+                                Tag="End Year" />
+                            <CheckBox
+                                x:Name="cbPresent"
+                                Grid.Row="4"
+                                Grid.Column="2"
+                                Margin="3,10,0,0"
+                                materialDesign:CheckBoxAssist.CheckBoxSize="20"
+                                Checked="cbPresent_Checked"
+                                Content="Present"
+                                FontFamily="{StaticResource Segoe UI}"
+                                FontWeight="Light"
+                                Style="{StaticResource MaterialDesignCheckBox}"
+                                Unchecked="cbPresent_Unchecked" />
+                        </Grid>
+                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                            <Button
+                                x:Name="btnCancel"
+                                Grid.Column="1"
+                                Width="70"
+                                HorizontalAlignment="Center"
+                                Background="{StaticResource btnColor4}"
+                                Click="btnCancel_Click"
+                                Content="Cancel"
+                                Foreground="{StaticResource cvText}"
+                                Style="{StaticResource btnAdd}" />
+                            <Button
+                                x:Name="btnSave"
+                                Grid.Column="1"
+                                Width="70"
+                                Margin="15,0,0,0"
+                                HorizontalAlignment="Center"
+                                Background="{StaticResource btnColor2}"
+                                Click="btnSave_Click"
+                                Content="Save"
+                                Foreground="{StaticResource cvText}"
+                                Style="{StaticResource btnAdd}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="90" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.ColumnSpan="2"
+                        Margin="5,0,5,0"
+                        VerticalAlignment="Center"
+                        FontFamily="{StaticResource Segoe UI}"
+                        FontSize="15"
+                        FontWeight="Light"
+                        Text="Your Work Experiences" />
+                    <Button
+                        Grid.Column="2"
+                        HorizontalAlignment="Center"
+                        Background="{StaticResource btnColor4}"
+                        Click="Button_Click"
+                        Content="Remove"
+                        Foreground="{StaticResource cvText}"
+                        Style="{StaticResource btnRemove}" />
+                </Grid>
+                <Border
+                    Grid.Row="3"
+                    Margin="5,0"
+                    BorderBrush="Gray"
+                    BorderThickness="1" />
+                <StackPanel Grid.Row="4">
+                    <ListView
+                        x:Name="experienceList"
+                        Grid.Row="6"
+                        Margin="10,0"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        ItemsSource="{Binding WorkExperiences}"
+                        ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                        ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid Margin="0,5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="105" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock
+                                            FontFamily="{StaticResource Segoe UI}"
+                                            FontSize="15"
+                                            FontWeight="SemiBold"
+                                            Text="{Binding JobName}" />
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                            <TextBlock
+                                                FontFamily="{StaticResource Segoe UI}"
+                                                FontSize="15"
+                                                Text="{Binding StartYear}" />
+                                            <TextBlock
+                                                FontFamily="{StaticResource Segoe UI}"
+                                                FontSize="15"
+                                                Text=" - " />
+                                            <TextBlock
+                                                FontFamily="{StaticResource Segoe UI}"
+                                                FontSize="15"
+                                                Text="{Binding EndYear}" />
+                                        </StackPanel>
+                                    </Grid>
+                                    <StackPanel Grid.Row="1">
+                                        <TextBlock
+                                            Width="{Binding ElementName=experienceList, Path=ActualWidth}"
+                                            FontFamily="{StaticResource Segoe UI}"
+                                            FontSize="13"
+                                            FontStyle="Italic"
+                                            FontWeight="SemiBold"
+                                            Text="{Binding Responsibility}" />
+                                        <TextBlock
+                                            Width="{Binding ElementName=experienceList, Path=ActualWidth}"
+                                            FontFamily="{StaticResource Segoe UI}"
+                                            FontSize="13"
+                                            Text="{Binding JobDescription}" />
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Border>
+</UserControl>
