@@ -26,26 +26,26 @@ namespace ProjectGenerateCVWPF.Pages
             InitializeComponent();
             List<string[]> templates = new List<string[]>();
 
-            templates.Add(new string[] { "Template1", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template2", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template3", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template4", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template5", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template6", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template7", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template8", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template9", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template10", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template11", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template12", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template13", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template14", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template15", "pack://application:,,,/Images/Templates/template1.png" });
-            templates.Add(new string[] { "Template16", "pack://application:,,,/Images/Templates/template1.png" });
+            templates.Add(new string[] { "Template1", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template2", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template3", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template4", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template5", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template6", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template7", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template8", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template9", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template10", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template11", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template12", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template13", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template14", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template15", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template16", "pack://application:,,,/Images/cv_template.png" });
 
             foreach(string[] template in templates)
             {
-                panelDisplay.Children.Add(new Pages.TemplateInterfaceUserControl() { Image = new ImageBrush(new BitmapImage(new Uri(template[1]))) { Stretch = Stretch.UniformToFill }, Title = template[0] });
+                panelDisplay.Children.Add(new Pages.TemplateInterfaceUserControl() { Image = new ImageBrush(new BitmapImage(new Uri(template[1]))) { Stretch = Stretch.Uniform }, Title = template[0] });
             }
 
             foreach(Pages.TemplateInterfaceUserControl template in panelDisplay.Children)

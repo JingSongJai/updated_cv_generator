@@ -199,7 +199,7 @@ namespace ProjectGenerateCVWPF.Pages
             {
                 string path = saveFileDialog.FileName;
                 loading.Visibility = Visibility.Visible;
-                await Task.Run(() => SaveAsPdf(RenderControlToBitmap((Control)panelCVDisplay.Children[0]), path));
+                await SaveAsPdf(RenderControlToBitmap((Control)panelCVDisplay.Children[0]), path);
             }
             loading.Visibility = Visibility.Collapsed;
         }

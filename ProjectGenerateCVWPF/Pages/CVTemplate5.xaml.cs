@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectGenerateCVWPF.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,15 @@ namespace ProjectGenerateCVWPF.Pages
     /// </summary>
     public partial class CVTemplate5 : UserControl
     {
+
         public CVTemplate5()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

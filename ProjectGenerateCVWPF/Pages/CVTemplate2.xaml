@@ -9,6 +9,9 @@
     Height="600"
     Background="White"
     mc:Ignorable="d">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="isVisible"/>
+    </UserControl.Resources>
     <Canvas>
         <Polygon Fill="#ababab" Points="0,0 0,150 230,0 0,0" />
         <Polygon Fill="#455064" Points="100,0 424,100 424,0 100,0" />
@@ -24,7 +27,7 @@
         </Border>
         <Grid
             Canvas.Left="20"
-            Canvas.Top="180"
+            Canvas.Top="170"
             Width="160">
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -250,9 +253,15 @@
             </ListView>
 
         </Grid>
-        <Grid Canvas.Left="190" Canvas.Top="70"
-              Width="225">
+        <Grid
+            Canvas.Left="190"
+            Canvas.Top="70"
+            Width="225">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -301,7 +310,8 @@
 
             <!--  Profile  -->
 
-            <StackPanel Grid.Row="2">
+            <StackPanel Grid.Row="2"
+                        Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
                 <StackPanel Margin="0,5" VerticalAlignment="Bottom">
                     <Border
                         Padding="7,3"
@@ -414,9 +424,18 @@
                                     Foreground="{StaticResource cvText3}"
                                     Style="{DynamicResource headerText2}"
                                     Text="{Binding JobName}" />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="{StaticResource cvText3}" Text="{Binding StartYear}" />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="{StaticResource cvText3}" Text=" - " />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="{StaticResource cvText3}" Text="{Binding EndYear}" />
+                                <TextBlock
+                                    Foreground="{StaticResource cvText3}"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding StartYear}" />
+                                <TextBlock
+                                    Foreground="{StaticResource cvText3}"
+                                    Style="{DynamicResource headerText2}"
+                                    Text=" - " />
+                                <TextBlock
+                                    Foreground="{StaticResource cvText3}"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding EndYear}" />
                             </StackPanel>
                             <TextBlock
                                 FontStyle="Italic"
@@ -424,12 +443,81 @@
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Responsibility}" />
                             <TextBlock
-                                Width="220"
+                                Width="225"
                                 Margin="0,0,0,2"
                                 HorizontalAlignment="Left"
                                 Foreground="{StaticResource cvText3}"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding JobDescription}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--  Reference  -->
+
+            <StackPanel
+                Grid.Row="7"
+                Margin="0,5"
+                VerticalAlignment="Bottom"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
+                <Border
+                    Padding="7,3"
+                    Background="LightGray"
+                    CornerRadius="3">
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        FontSize="10"
+                        FontWeight="SemiBold"
+                        Foreground="{StaticResource cvText3}"
+                        Style="{StaticResource headerText2}"
+                        Text="REFERENCES"
+                        TextAlignment="Center" />
+                </Border>
+            </StackPanel>
+
+            <ListView
+                Grid.Row="8"
+                Background="Transparent"
+                BorderThickness="0"
+                IsHitTestVisible="False"
+                ItemsSource="{Binding References}"
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="-5,-10,0,0">
+                            <TextBlock
+                                Width="100"
+                                FontWeight="SemiBold"
+                                Foreground="{StaticResource cvText3}"
+                                Style="{DynamicResource headerText2}"
+                                Text="{Binding Name}" />
+                            <TextBlock
+                                Width="100"
+                                Margin="0,0,0,3"
+                                FontStyle="Italic"
+                                FontWeight="SemiBold"
+                                Foreground="{StaticResource cvText3}"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Company}" />
+                            <TextBlock
+                                Width="100"
+                                Margin="0,0,0,2"
+                                Foreground="{StaticResource cvText3}"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Email}" />
+                            <TextBlock
+                                Width="100"
+                                Foreground="{StaticResource cvText3}"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Phone}" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -23,6 +23,7 @@
     <None Remove="Images\company.png" />
     <None Remove="Images\cv_icon.ico" />
     <None Remove="Images\cv_images.png" />
+    <None Remove="Images\cv_template.png" />
     <None Remove="Images\default_photo.jpg" />
     <None Remove="Images\education.png" />
     <None Remove="Images\email %282%29.png" />
@@ -96,6 +97,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\company.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\cv_template.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\default_photo.jpg">

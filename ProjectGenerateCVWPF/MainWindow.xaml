@@ -15,6 +15,7 @@
     Background="Transparent"
     Icon="Images/cv_icon.ico"
     MouseLeftButtonDown="Window_MouseLeftButtonDown"
+    ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -43,20 +44,23 @@
                             FontFamily="{StaticResource Segoe UI}"
                             FontSize="20"
                             FontWeight="Light"
-                            Text="CV" />
+                            Text="CV Generator" />
                     </StackPanel>
-                    <RadioButton IsChecked="True" Style="{DynamicResource buttonMenu}">
+                    <RadioButton
+                        Checked="RadioButton_Checked_1"
+                        IsChecked="True"
+                        Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
                             <fa:ImageAwesome Icon="AddressCard" Style="{StaticResource imageMenu}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Template" />
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{DynamicResource buttonMenu}">
+                    <!--<RadioButton Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
                             <fa:ImageAwesome Icon="Save" Style="{StaticResource imageMenu}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Saved Template" />
                         </StackPanel>
-                    </RadioButton>
+                    </RadioButton>-->
                     <RadioButton Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
                             <fa:ImageAwesome Icon="UserCircle" Style="{StaticResource imageMenu}" />
@@ -69,7 +73,7 @@
                             <TextBlock Style="{DynamicResource textMenu}" Text="About Us" />
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{DynamicResource buttonMenu}">
+                    <RadioButton Checked="RadioButton_Checked" Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
                             <fa:ImageAwesome Icon="ArrowCircleLeft" Style="{StaticResource imageMenu}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Exit" />

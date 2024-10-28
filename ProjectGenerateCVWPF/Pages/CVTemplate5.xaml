@@ -8,7 +8,11 @@
     Width="424"
     Height="600"
     Background="White"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="isVisible"/>
+    </UserControl.Resources>
     <Canvas>
         <Border
             Canvas.Left="37"
@@ -16,7 +20,37 @@
             Width="350"
             Height="80"
             Background="#175e92"
-            CornerRadius="40" />
+            CornerRadius="40">
+            <StackPanel Canvas.Top="10" Width="424"
+                        VerticalAlignment="Center">
+                <TextBlock
+                    Width="230"
+                    Height="Auto"
+                    Margin="0,5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontFamily="{DynamicResource CV Font}"
+                    FontSize="24"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="{Binding Profile.Name}"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" />
+
+                <TextBlock
+                    Width="230"
+                    Height="Auto"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontFamily="{DynamicResource Segoe UI}"
+                    FontSize="13"
+                    FontWeight="Light"
+                    Foreground="White"
+                    Text="{Binding Profile.Position}"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
         <Border
             Canvas.Left="17"
             Canvas.Top="10"
@@ -29,8 +63,10 @@
                 <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
             </Border.Background>
         </Border>
-        <Grid Canvas.Top="160" Width="150">
+        <Grid Canvas.Top="140" Width="150">
             <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -41,9 +77,36 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
+            <!--  About Me  -->
+
+            <Border
+                Height="20"
+                Margin="0,2"
+                Background="#175e92"
+                CornerRadius="0 12 12 0">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="12"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Style="{StaticResource headerText2}"
+                    Text="ABOUT ME" />
+            </Border>
+
+            <TextBlock
+                Grid.Row="1"
+                Width="140"
+                Padding="10,0,0,0"
+                HorizontalAlignment="Left"
+                Foreground="Black"
+                Style="{StaticResource descText1}"
+                Text="{Binding Profile.AboutMe}" />
+
             <!--  Contact  -->
 
             <Border
+                Grid.Row="2"
                 Height="20"
                 Margin="0,2"
                 Background="#175e92"
@@ -58,7 +121,7 @@
                     Text="CONTACT" />
             </Border>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="3">
                 <StackPanel Orientation="Horizontal">
                     <Image
                         Width="18"
@@ -116,7 +179,7 @@
             <!--  Skills  -->
 
             <Border
-                Grid.Row="2"
+                Grid.Row="4"
                 Height="20"
                 Margin="0,2"
                 Background="#175e92"
@@ -132,7 +195,7 @@
             </Border>
 
             <ListView
-                Grid.Row="3"
+                Grid.Row="5"
                 Background="Transparent"
                 BorderThickness="0"
                 IsHitTestVisible="False"
@@ -159,7 +222,7 @@
             <!--  Languages  -->
 
             <Border
-                Grid.Row="4"
+                Grid.Row="6"
                 Height="20"
                 Margin="0,2"
                 Background="#175e92"
@@ -175,7 +238,7 @@
             </Border>
 
             <ListView
-                Grid.Row="5"
+                Grid.Row="7"
                 Background="Transparent"
                 BorderThickness="0"
                 IsHitTestVisible="False"
@@ -202,11 +265,12 @@
             <!--  References  -->
 
             <Border
-                Grid.Row="6"
+                Grid.Row="8"
                 Height="20"
                 Margin="0,2"
                 Background="#175e92"
-                CornerRadius="0 12 12 0">
+                CornerRadius="0 12 12 0"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -218,14 +282,15 @@
             </Border>
 
             <ListView
-                Grid.Row="7"
+                Grid.Row="9"
                 Margin="5,0"
                 Background="Transparent"
                 BorderThickness="0"
                 IsHitTestVisible="False"
                 ItemsSource="{Binding References}"
                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel HorizontalAlignment="Left" />
@@ -281,13 +346,14 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <!--  About Me  -->
+            <!--  Profile  -->
 
             <Border
                 Height="20"
                 Margin="0,2"
                 Background="#175e92"
-                CornerRadius="12 0 0 12">
+                CornerRadius="12 0 0 12"
+                Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -295,17 +361,64 @@
                     FontWeight="SemiBold"
                     Foreground="White"
                     Style="{StaticResource headerText2}"
-                    Text="ABOUT ME" />
+                    Text="PROFILE" />
             </Border>
 
-            <TextBlock
-                Grid.Row="1"
-                Width="234"
-                Padding="10,0,0,0"
-                HorizontalAlignment="Left"
-                Foreground="Black"
-                Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+            <StackPanel Grid.Row="1" Margin="10,0,5,0"
+                        Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
+                <StackPanel Margin="0,2" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="Nationality     :  " />
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.Nationality}" />
+                </StackPanel>
+                <StackPanel Margin="0,2" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="Sex                 :  " />
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.Gender}" />
+                </StackPanel>
+                <StackPanel Margin="0,2" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="Date of Birth  :  " />
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                </StackPanel>
+                <StackPanel Margin="0,2" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="Place of Birth :  " />
+                    <TextBlock
+                        Width="160"
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.PlaceofBirth}" />
+                </StackPanel>
+                <StackPanel Margin="0,2" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="Marital Status :  " />
+                    <TextBlock
+                        Foreground="{StaticResource cvText3}"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.MaritalState}" />
+                </StackPanel>
+            </StackPanel>
+
 
             <!--  Education  -->
 
@@ -336,9 +449,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5,-9,0,0">
-                            <StackPanel
-                                Width="220"
-                                Orientation="Horizontal">
+                            <StackPanel Width="220" Orientation="Horizontal">
                                 <TextBlock
                                     Width="160"
                                     Style="{DynamicResource headerText2}"
@@ -386,12 +497,10 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="5,-10,0,-4">
-                            <StackPanel
-                                Width="230"
-                                Orientation="Horizontal">
+                            <StackPanel Width="230" Orientation="Horizontal">
                                 <TextBlock
-                                    HorizontalAlignment="Left"
                                     Width="170"
+                                    HorizontalAlignment="Left"
                                     FontWeight="SemiBold"
                                     Foreground="Black"
                                     Style="{DynamicResource headerText2}"

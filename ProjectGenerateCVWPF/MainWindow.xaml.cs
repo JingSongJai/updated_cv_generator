@@ -48,5 +48,16 @@ namespace ProjectGenerateCVWPF
             WindowInteropHelper helper = new WindowInteropHelper(this);
             SendMessage(helper.Handle, 161, 2, 0); 
         }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            //panelDisplay.Children.Clear();
+            //panelDisplay.Children.Add(App.templateMenu); 
+        }
     }
 }
