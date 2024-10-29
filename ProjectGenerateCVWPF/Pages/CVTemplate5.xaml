@@ -8,10 +8,10 @@
     Width="424"
     Height="600"
     Background="White"
-    mc:Ignorable="d"
-    Loaded="UserControl_Loaded">
+    Loaded="UserControl_Loaded"
+    mc:Ignorable="d">
     <UserControl.Resources>
-        <BooleanToVisibilityConverter x:Key="isVisible"/>
+        <BooleanToVisibilityConverter x:Key="isVisible" />
     </UserControl.Resources>
     <Canvas>
         <Border
@@ -21,8 +21,10 @@
             Height="80"
             Background="#175e92"
             CornerRadius="40">
-            <StackPanel Canvas.Top="10" Width="424"
-                        VerticalAlignment="Center">
+            <StackPanel
+                Canvas.Top="10"
+                Width="424"
+                VerticalAlignment="Center">
                 <TextBlock
                     Width="230"
                     Height="Auto"
@@ -364,58 +366,32 @@
                     Text="PROFILE" />
             </Border>
 
-            <StackPanel Grid.Row="1" Margin="10,0,5,0"
-                        Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
+            <StackPanel
+                Grid.Row="1"
+                Margin="10,0,5,0"
+                Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="Nationality     :  " />
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="{Binding Profile.Nationality}" />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="Nationality     :  " />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.Nationality}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="Sex                 :  " />
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="{Binding Profile.Gender}" />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="Sex                 :  " />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.Gender}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="Date of Birth  :  " />
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="Date of Birth  :  " />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="Place of Birth :  " />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="Place of Birth :  " />
                     <TextBlock
                         Width="165"
-                        Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="Marital Status :  " />
-                    <TextBlock
-                        Foreground="{StaticResource cvText3}"
-                        Style="{DynamicResource headerText2}"
-                        Text="{Binding Profile.MaritalState}" />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="Marital Status :  " />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.MaritalState}" />
                 </StackPanel>
             </StackPanel>
 

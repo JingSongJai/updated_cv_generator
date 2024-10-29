@@ -61,7 +61,7 @@
                     FontWeight="Bold"
                     Foreground="{StaticResource btnColor1}"
                     Text="Templates" />
-                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <!--<StackPanel Grid.Column="1" Orientation="Horizontal">
                     <TextBlock
                         VerticalAlignment="Center"
                         FontSize="17"
@@ -80,13 +80,8 @@
                         Foreground="#01a3fe"
                         Style="{StaticResource forButton}"
                         Click="Button_Click"/>
-                    <Button
-                        Background="#01a3fe"
-                        Content="Customize"
-                        Foreground="White"
-                        Style="{StaticResource forButton}"
-                        Click="Button_Click_1"/>
-                </StackPanel>
+                    
+                </StackPanel>-->
             </Grid>
             <Border
                 Grid.Row="1"

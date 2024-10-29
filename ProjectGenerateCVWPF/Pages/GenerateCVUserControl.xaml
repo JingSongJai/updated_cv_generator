@@ -241,6 +241,8 @@
                                 <ComboBoxItem Content="Template5" />
                                 <ComboBoxItem Content="Template6" />
                                 <ComboBoxItem Content="Template7" />
+                                <ComboBoxItem Content="Template8" />
+                                <ComboBoxItem Content="Template9" />
                             </ComboBox>
                         </StackPanel>
                         <Grid x:Name="panelCVDisplay" Grid.Row="2" />

@@ -223,7 +223,7 @@
                     Margin="5,0"
                     BorderBrush="Gray"
                     BorderThickness="1" />
-                <StackPanel Grid.Row="4">
+                <StackPanel x:Name="panel" Grid.Row="4">
                     <ListView
                         x:Name="experienceList"
                         Grid.Row="6"
@@ -274,7 +274,7 @@
                                             FontWeight="SemiBold"
                                             Text="{Binding Responsibility}" />
                                         <TextBlock
-                                            Width="{Binding ElementName=experienceList, Path=ActualWidth}"
+                                            Width="{Binding ElementName=panel, Path=ActualWidth}"
                                             FontFamily="{StaticResource Segoe UI}"
                                             FontSize="13"
                                             Text="{Binding JobDescription}" />

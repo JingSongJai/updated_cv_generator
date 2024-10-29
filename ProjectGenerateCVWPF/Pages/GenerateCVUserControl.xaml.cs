@@ -196,8 +196,20 @@ namespace ProjectGenerateCVWPF.Pages
                     template7.DataContext = vm;
                     //App.maxSkill = template1.maxSkill; 
                     break; 
-
-
+                case "Template8": 
+                    CVTemplate8 template8 = new CVTemplate8();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template8);
+                    template8.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+                case "Template9": 
+                    CVTemplate9 template9 = new CVTemplate9();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template9);
+                    template9.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
             }
         }
 
@@ -253,6 +265,14 @@ namespace ProjectGenerateCVWPF.Pages
                 case "Template7":
                     panelCVDisplay.Children.Clear();
                     panelCVDisplay.Children.Add(new CVTemplate7() { DataContext = vm });
+                    break; 
+                case "Template8":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate8() { DataContext = vm });
+                    break; 
+                case "Template9":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate9() { DataContext = vm });
                     break; 
 
             }

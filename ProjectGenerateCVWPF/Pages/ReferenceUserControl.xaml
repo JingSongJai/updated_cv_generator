@@ -86,10 +86,10 @@
                         <TextBlock
                             Margin="5,0"
                             VerticalAlignment="Center"
+                            FontFamily="{StaticResource Segoe UI}"
                             FontSize="24"
                             FontWeight="SemiBold"
                             Foreground="{StaticResource btnColor1}"
-                            Style="{StaticResource headerText2}"
                             Text="Reference" />
                     </StackPanel>
                     <CheckBox
@@ -193,8 +193,9 @@
                         Grid.ColumnSpan="2"
                         Margin="5,0,5,0"
                         VerticalAlignment="Center"
+                        FontFamily="{StaticResource Segoe UI}"
+                        FontWeight="Light"
                         FontSize="15"
-                        Style="{StaticResource descText2}"
                         Text="Your References" />
                     <Button
                         Grid.Column="2"

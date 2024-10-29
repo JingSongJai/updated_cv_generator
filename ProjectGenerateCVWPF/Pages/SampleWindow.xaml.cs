@@ -39,5 +39,12 @@ namespace ProjectGenerateCVWPF.Pages
         {
             this.Close(); 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            App.main.panelDisplay.Children.Clear();
+            App.main.panelDisplay.Children.Add(new GenerateCVUserControl() { SelectedTemplate = TemplateName });
+            this.Close(); 
+        }
     }
 }

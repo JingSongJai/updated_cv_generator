@@ -56,16 +56,10 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void userClicked_EventHandler(object sender, MouseButtonEventArgs e)
         {
-            txtSelectedTemplate.Text = ((TemplateInterfaceUserControl)sender).Title; 
-        }
+            string selectedTemplateName = ((TemplateInterfaceUserControl)sender).Title;
+            SampleWindow sw = new SampleWindow() { TemplateName = selectedTemplateName };
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (txtSelectedTemplate.Text == "None") return; 
-
-            SampleWindow sw = new SampleWindow(); 
-            sw.TemplateName = txtSelectedTemplate.Text;
-            sw.panelDisplay.Children.Add(getTemplate(txtSelectedTemplate.Text));
+            sw.panelDisplay.Children.Add(getTemplate(selectedTemplateName));
             sw.ShowDialog(); 
         }
 
@@ -103,17 +97,17 @@ namespace ProjectGenerateCVWPF.Pages
                     tmp = new CVTemplate7();
                     tmp.DataContext = App.sampleViewModel; 
                     break;
+                case "Template8":
+                    tmp = new CVTemplate8();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
+                case "Template9":
+                    tmp = new CVTemplate9();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
 
             }
             return tmp;
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            if (txtSelectedTemplate.Text == "None") return;
-
-            App.main.panelDisplay.Children.Clear();
-            App.main.panelDisplay.Children.Add(new GenerateCVUserControl() { SelectedTemplate = txtSelectedTemplate.Text }); 
         }
     }
 }
