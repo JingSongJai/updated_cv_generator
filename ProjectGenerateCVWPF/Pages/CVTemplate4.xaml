@@ -9,6 +9,9 @@
     Height="600"
     Background="White"
     mc:Ignorable="d">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="isVisible" />
+    </UserControl.Resources>
     <Canvas>
         <Canvas.Clip>
             <RectangleGeometry Rect="0 0 424 600" />
@@ -19,7 +22,7 @@
             Background="#172242" />
         <Border
             Canvas.Left="100"
-            Canvas.Top="-360"
+            Canvas.Top="-380"
             Width="400"
             Height="400"
             Background="#284473"
@@ -37,7 +40,7 @@
 
         <Border
             Canvas.Left="40"
-            Canvas.Top="45"
+            Canvas.Top="25"
             Width="120"
             Height="120"
             BorderBrush="#5290c9"
@@ -48,7 +51,7 @@
             </Border.Background>
         </Border>
 
-        <Grid Canvas.Top="210" Width="180">
+        <Grid Canvas.Top="190" Width="180">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
@@ -63,7 +66,8 @@
             <!--  Contact  -->
 
             <TextBlock
-                HorizontalAlignment="Center"
+                Margin="69,0,0,0"
+                HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 FontSize="12"
                 FontWeight="SemiBold"
@@ -71,7 +75,7 @@
                 Style="{StaticResource headerText2}"
                 Text="Contact" />
 
-            <StackPanel Grid.Row="1" Margin="10,0">
+            <StackPanel Grid.Row="1" Margin="10,3,10,0">
                 <StackPanel Orientation="Horizontal">
                     <Image
                         Width="15"
@@ -131,7 +135,7 @@
             <Border
                 Grid.Row="2"
                 Height="23"
-                Margin="0,3"
+                Margin="0,3,0,3"
                 Background="#5290c9">
                 <TextBlock
                     HorizontalAlignment="Center"
@@ -145,6 +149,7 @@
 
             <ListView
                 Grid.Row="3"
+                Margin="0,3,0,0"
                 Background="Transparent"
                 BorderThickness="0"
                 IsHitTestVisible="False"
@@ -173,7 +178,7 @@
             <Border
                 Grid.Row="4"
                 Height="23"
-                Margin="0,3"
+                Margin="0,3,0,3"
                 Background="#5290c9">
                 <TextBlock
                     HorizontalAlignment="Center"
@@ -187,6 +192,7 @@
 
             <ListView
                 Grid.Row="5"
+                Margin="0,3,0,0"
                 Background="Transparent"
                 BorderThickness="0"
                 IsHitTestVisible="False"
@@ -205,6 +211,322 @@
                                 Foreground="White"
                                 Style="{StaticResource descText1}"
                                 Text="{Binding Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--  References  -->
+
+            <Border
+                Grid.Row="6"
+                Height="23"
+                Margin="0,3,0,3"
+                Background="#5290c9">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="12"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Style="{StaticResource headerText2}"
+                    Text="Reference" />
+            </Border>
+
+            <ListView
+                Grid.Row="7"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"
+                Margin="5,3,5,0"
+                Background="Transparent"
+                BorderThickness="0"
+                IsHitTestVisible="False"
+                ItemsSource="{Binding References}"
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,-10,0,0">
+                            <TextBlock
+                                Width="150"
+                                FontWeight="SemiBold"
+                                Foreground="White"
+                                Style="{DynamicResource headerText2}"
+                                Text="{Binding Name}" />
+                            <TextBlock
+                                Width="150"
+                                Margin="0,0,0,3"
+                                FontStyle="Italic"
+                                FontWeight="SemiBold"
+                                Foreground="White"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Company}" />
+                            <TextBlock
+                                Width="150"
+                                Margin="0,0,0,2"
+                                Foreground="White"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Email}" />
+                            <TextBlock
+                                Width="150"
+                                Foreground="White"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Phone}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+
+        <Grid Canvas.Left="190" Canvas.Top="100"
+              Width="225">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--  Name and Position  -->
+
+            <StackPanel>
+                <TextBlock
+                    Width="220"
+                    Height="Auto"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontFamily="{DynamicResource CV Font}"
+                    FontSize="24"
+                    FontWeight="Bold"
+                    Foreground="#1c3f75"
+                    Text="{Binding Profile.Name}"
+                    TextWrapping="Wrap" />
+
+                <TextBlock
+                    Canvas.Left="150"
+                    Canvas.Top="10"
+                    Width="220"
+                    Height="Auto"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    FontFamily="{DynamicResource CV Font}"
+                    FontSize="14"
+                    Foreground="#1c3f75"
+                    Text="{Binding Profile.Position}"
+                    TextWrapping="Wrap" />
+            </StackPanel>
+
+            <!--  Profile  -->
+
+            <StackPanel Grid.Row="1" Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
+                <Border
+                    Padding="5,0,0,0"
+                    BorderBrush="#1c3f75"
+                    BorderThickness="4,0,0,0">
+                    <TextBlock
+                        Margin="0,3"
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText1}"
+                        Text="PROFILE" />
+                </Border>
+                <StackPanel Margin="10 0 0 0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="Nationality     :  " />
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.Nationality}" />
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="Sex                 :  " />
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.Gender}" />
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="Date of Birth  :  " />
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="Place of Birth :  " />
+                    <TextBlock
+                        Width="150"
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.PlaceofBirth}" />
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="Marital Status :  " />
+                    <TextBlock
+                        Foreground="#1c3f75"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.MaritalState}" />
+                </StackPanel>
+            </StackPanel>
+
+            <!--  About Me  -->
+
+            <Border
+                Grid.Row="2"
+                Padding="5,0,0,0"
+                BorderBrush="#1c3f75"
+                BorderThickness="4,0,0,0">
+                <TextBlock
+                    Margin="0,3"
+                    Foreground="#1c3f75"
+                    Style="{DynamicResource headerText1}"
+                    Text="About Me" />
+            </Border>
+
+            <TextBlock
+                Grid.Row="3"
+                Width="220"
+                HorizontalAlignment="Left"
+                Foreground="{StaticResource cvText3}"
+                Style="{StaticResource descText1}"
+                Text="{Binding Profile.AboutMe}" />
+
+            <!--  Experiences  -->
+
+            <Border
+                Grid.Row="4"
+                Padding="5,0,0,0"
+                BorderBrush="#1c3f75"
+                BorderThickness="4,0,0,0">
+                <TextBlock
+                    Margin="0,3"
+                    Foreground="#1c3f75"
+                    Style="{DynamicResource headerText1}"
+                    Text="EXPERIENCES" />
+            </Border>
+
+            <ListView
+                Grid.Row="5"
+                Background="Transparent"
+                BorderThickness="0"
+                IsHitTestVisible="False"
+                ItemsSource="{Binding WorkExperiences}"
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,-4">
+                            <StackPanel
+                                Width="225"
+                                Margin="0,-10,0,0"
+                                Orientation="Horizontal">
+                                <TextBlock
+                                    Width="155"
+                                    HorizontalAlignment="Left"
+                                    FontWeight="SemiBold"
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding JobName}" />
+                                <TextBlock
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding StartYear}" />
+                                <TextBlock
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text=" - " />
+                                <TextBlock
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding EndYear}" />
+                            </StackPanel>
+                            <TextBlock
+                                Margin="0,0,0,0"
+                                FontStyle="Italic"
+                                Foreground="#1c3f75"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding Responsibility}" />
+                            <TextBlock
+                                Width="225"
+                                Margin="0,0,0,2"
+                                Foreground="#1c3f75"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding JobDescription}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--  Educations  -->
+
+            <Border
+                Grid.Row="6"
+                Padding="5,0,0,0"
+                BorderBrush="#1c3f75"
+                BorderThickness="4,0,0,0">
+                <TextBlock
+                    Margin="0,3"
+                    Foreground="#1c3f75"
+                    Style="{DynamicResource headerText1}"
+                    Text="EDUCATION" />
+            </Border>
+
+            <ListView
+                Grid.Row="7"
+                Background="Transparent"
+                BorderThickness="0"
+                IsHitTestVisible="False"
+                ItemsSource="{Binding Educations}"
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,-10,0,0">
+                            <StackPanel Width="225" Orientation="Horizontal">
+                                <TextBlock
+                                    Width="155"
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding MajorName}" />
+                                <TextBlock
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding StartYear}" />
+                                <TextBlock
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text=" - " />
+                                <TextBlock
+                                    Foreground="#1c3f75"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding EndYear}" />
+                            </StackPanel>
+                            <TextBlock
+                                Width="225"
+                                FontStyle="Italic"
+                                Foreground="#1c3f75"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding SchoolName}" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

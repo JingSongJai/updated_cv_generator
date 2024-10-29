@@ -47,7 +47,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void btnRemoveImage_Click(object sender, RoutedEventArgs e)
         {
-            btnAddImage.Tag = "pack://application:,,,/Images/default_photo.jpg";
+            btnAddImage.Tag = "pack://application:,,,/Images/person.jpg";
         }
 
         private void comboboxGender_SelectionChanged(object sender, SelectionChangedEventArgs e)

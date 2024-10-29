@@ -24,7 +24,7 @@ namespace ProjectGenerateCVWPF.Data
         public string? Email { get; set; }
         public string? CurrentPlace { get; set; }
         public string? ImagePath { get; set; }
-        public bool? IsProfileVisible { get; set; } = true; 
+        public bool? IsProfileVisible { get; set; } = false; 
         public bool? IsReferenceVisible { get; set; } = true;
     }
 }

@@ -327,7 +327,7 @@
                             TextAlignment="Center" />
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -337,7 +337,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Nationality}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -347,7 +347,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Gender}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -357,7 +357,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -368,7 +368,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"

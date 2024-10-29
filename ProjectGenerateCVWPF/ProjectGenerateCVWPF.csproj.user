@@ -22,6 +22,12 @@
     <Compile Update="Pages\CVTemplate5.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\CVTemplate6.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CVTemplate7.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\EducationUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,6 +82,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\CVTemplate5.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate6.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate7.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\EducationUserControl.xaml">
