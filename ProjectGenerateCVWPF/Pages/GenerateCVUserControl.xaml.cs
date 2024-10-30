@@ -30,15 +30,34 @@ namespace ProjectGenerateCVWPF.Pages
         public GenerateCVUserControl()
         {
             InitializeComponent();
-            
-            profilePage.DataContext = vm; 
+
+            setDataContexttoPages(); 
+            panelDisplay.Children.Add(profilePage);
+
+            getProfiles(); 
+        }
+
+        private void setDataContexttoPages()
+        {
+            profilePage.DataContext = vm;
             skillsPage.DataContext = vm;
             languagesPage.DataContext = vm;
             educationPage.DataContext = vm;
             workexperiencePage.DataContext = vm;
             referencePage.DataContext = vm;
-            panelDisplay.Children.Add(profilePage);
-            
+        }
+
+        private void getProfiles()
+        {
+            cbProfile.Items.Clear(); 
+            string[] files = Directory.GetFiles("Profiles");
+
+            if (files.Length == 0) return; 
+
+            foreach(string file in files)
+            {
+                cbProfile.Items.Add(System.IO.Path.GetFileNameWithoutExtension(file));
+            }
         }
 
         public async Task SaveAsPdf(BitmapSource bitmap, string outputPath)
@@ -297,19 +316,23 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void btnSaveProfile_Click(object sender, RoutedEventArgs e)
         {
-            string curId = AutoID("Profiles").ToString(); 
+            //string curId = AutoID("Profiles").ToString(); 
 
-            string jsonString = JsonSerializer.Serialize(vm, new JsonSerializerOptions() { WriteIndented = true });
-            File.WriteAllText($"Profiles/{AutoID("Profiles")}.json", jsonString);
+            //string jsonString = JsonSerializer.Serialize(vm, new JsonSerializerOptions() { WriteIndented = true });
+            //File.WriteAllText($"Profiles/{AutoID("Profiles")}.json", jsonString);
 
-            if (vm.Profile.ImagePath == "pack://application:,,,/Images/person.jpg" && Application.GetResourceStream(new Uri(vm.Profile.ImagePath)) != null)
-            {
-                using (FileStream fileStream = new FileStream("Images/" + curId + ".jpg", FileMode.Create, FileAccess.Write))
-                {
-                    Application.GetResourceStream(new Uri(vm.Profile.ImagePath)).Stream.CopyTo(fileStream);
-                }
-            }
-            else File.Copy(vm.Profile.ImagePath, "Images/" + curId + Path.GetExtension(vm.Profile.ImagePath));
+            //if (vm.Profile.ImagePath == "pack://application:,,,/Images/person.jpg" && Application.GetResourceStream(new Uri(vm.Profile.ImagePath)) != null)
+            //{
+            //    using (FileStream fileStream = new FileStream("Images/" + curId + ".jpg", FileMode.Create, FileAccess.Write))
+            //    {
+            //        Application.GetResourceStream(new Uri(vm.Profile.ImagePath)).Stream.CopyTo(fileStream);
+            //    }
+            //}
+            //else File.Copy(vm.Profile.ImagePath, "Images/" + curId + Path.GetExtension(vm.Profile.ImagePath));
+
+            new SaveProfileWindow() { vm = vm, ImagePath = vm.Profile.ImagePath }.ShowDialog();
+
+            getProfiles(); 
         }
 
         private int AutoID(string path)
@@ -340,6 +363,20 @@ namespace ProjectGenerateCVWPF.Pages
                 }
             }
             return ext;
+        }
+
+        private void cbProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbProfile.SelectedIndex == -1) return; 
+
+            string selectedName = cbProfile.SelectedItem.ToString();
+
+            string jsonString = File.ReadAllText("Profiles/" + selectedName + ".json");
+
+            vm = JsonSerializer.Deserialize<ViewModel>(jsonString);
+
+            (panelCVDisplay.Children[0] as Control).DataContext = vm;
+            setDataContexttoPages(); 
         }
     }
 }

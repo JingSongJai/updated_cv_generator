@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ProjectGenerateCVWPF.Data
 {
-    internal class ViewModel
+    public class ViewModel
     {
         public ObservableCollection<Skills> Skills { get; set; }
         public ObservableCollection<Languages> Languages { get; set; }

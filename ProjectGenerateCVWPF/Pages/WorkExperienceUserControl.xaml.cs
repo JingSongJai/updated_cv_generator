@@ -87,7 +87,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (experienceList.SelectedIndex == -1) vm.WorkExperiences.RemoveAt(experienceList.SelectedIndex); 
+            if (experienceList.SelectedIndex != -1) vm.WorkExperiences.RemoveAt(experienceList.SelectedIndex); 
         }
     }
 }

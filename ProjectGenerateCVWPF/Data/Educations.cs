@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectGenerateCVWPF.Data
 {
-    class Educations
+    public class Educations
     {
         public string SchoolName { get; set; }
         public string MajorName { get; set; }

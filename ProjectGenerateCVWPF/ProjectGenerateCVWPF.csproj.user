@@ -46,6 +46,9 @@
     <Compile Update="Pages\ProfileInformationUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\ProfileUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\ReferenceUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -53,6 +56,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\SavedTemplateUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\SaveProfileWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\SettingsUserControl.xaml.cs">
@@ -114,6 +120,9 @@
     <Page Update="Pages\ProfileInformationUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\ProfileUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\ReferenceUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -121,6 +130,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SavedTemplateUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SaveProfileWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SettingsUserControl.xaml">

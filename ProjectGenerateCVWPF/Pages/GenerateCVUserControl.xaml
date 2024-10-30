@@ -9,7 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="usercontrol"
     d:DesignHeight="710"
-    d:DesignWidth="1000"
+    d:DesignWidth="1050"
     Background="Transparent"
     Loaded="UserControl_Loaded"
     mc:Ignorable="d">
@@ -107,7 +107,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20" />
                     <ColumnDefinition Width="60" />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="450"/>
                     <ColumnDefinition Width="0" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
@@ -243,6 +243,20 @@
                                 <ComboBoxItem Content="Template7" />
                                 <ComboBoxItem Content="Template8" />
                                 <ComboBoxItem Content="Template9" />
+                            </ComboBox>
+                            <TextBlock
+                                Padding="10"
+                                VerticalAlignment="Center"
+                                FontSize="15"
+                                Text="Profile : " />
+                            <ComboBox
+                                x:Name="cbProfile"
+                                Padding="10"
+                                FontFamily="{StaticResource Segoe UI}"
+                                FontSize="15"
+                                FontWeight="Light"
+                                SelectionChanged="cbProfile_SelectionChanged"
+                                Style="{StaticResource MaterialDesignComboBox}">
                             </ComboBox>
                         </StackPanel>
                         <Grid x:Name="panelCVDisplay" Grid.Row="2" />

@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:ProjectGenerateCVWPF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="1180"
+    Width="1360"
     Height="770"
     MinWidth="1185"
     MinHeight="770"
@@ -94,10 +94,10 @@
                         Click="Button_Click_2"
                         Content="—"
                         Style="{StaticResource operatorButton}" />
-                    <Button
+                    <!--<Button
                         Click="Button_Click_1"
                         Content="▢"
-                        Style="{StaticResource operatorButton}" />
+                        Style="{StaticResource operatorButton}" />-->
                     <Button
                         Margin="10,0,20,0"
                         Click="Button_Click"

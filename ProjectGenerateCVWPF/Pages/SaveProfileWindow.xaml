@@ -1,0 +1,128 @@
+﻿<Window
+    x:Class="ProjectGenerateCVWPF.Pages.SaveProfileWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SaveProfileWindow"
+    Width="300"
+    Height="200"
+    MinWidth="300"
+    MinHeight="200"
+    MaxWidth="300"
+    MaxHeight="200"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="btnSave" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="borderBackground"
+                            Height="40"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                ContentSource="Content" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="{StaticResource btnColor1}" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnCancel" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="borderBackground"
+                            Width="80"
+                            Height="40"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                ContentSource="Content" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                x:Name="txtTemplateName"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="18"
+                Padding="80 0 0 0"
+                FontWeight="Light"
+                Style="{StaticResource headerText2}"
+                Text="Save Profile"/>
+            <Button
+                Grid.Column="1"
+                Margin="0,0,20,0"
+                HorizontalAlignment="Right"
+                Content="✕"
+                FontSize="15"
+                Style="{StaticResource btnBack}"
+                Click="Button_Click"/>
+        </Grid>
+        <TextBox
+            x:Name="tbProfileName"
+            Grid.Row="1"
+            Height="40"
+            Margin="20,0"
+            Style="{StaticResource tbReference}"
+            Tag="Profile Name" />
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button
+                Margin="20,0,0,0"
+                HorizontalAlignment="Left"
+                Background="{StaticResource btnColor4}"
+                Content="Cancel"
+                Foreground="White"
+                Style="{StaticResource btnCancel}" Click="Button_Click" />
+            <Button
+                Grid.Column="1"
+                Margin="0,0,20,0"
+                HorizontalAlignment="Right"
+                Background="{StaticResource btnColor2}"
+                Content="Save"
+                Foreground="White"
+                Style="{StaticResource btnCancel}" Click="Button_Click_1" />
+        </Grid>
+    </Grid>
+</Window>
