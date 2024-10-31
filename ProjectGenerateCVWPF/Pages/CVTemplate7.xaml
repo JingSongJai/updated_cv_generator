@@ -259,7 +259,7 @@
                 Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5,-10,0,0">
+                        <StackPanel Margin="5,-7,0,0">
                             <TextBlock
                                 Width="110"
                                 FontWeight="SemiBold"
@@ -396,7 +396,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-3,-10,0,0">
+                        <StackPanel Margin="-3,-7,0,0">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Foreground="#3c406f"
@@ -445,7 +445,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,-10,0,-4">
+                        <StackPanel Margin="0,-7,0,-4">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Foreground="#3c406f"

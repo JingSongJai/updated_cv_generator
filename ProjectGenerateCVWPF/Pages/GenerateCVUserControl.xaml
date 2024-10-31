@@ -22,6 +22,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
+                            x:Name="borderBackground"
                             Width="120"
                             Margin="5,10"
                             Padding="5,3"
@@ -36,6 +37,39 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="#0192ff" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnSaveToProfile" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="borderBackground"
+                            Width="120"
+                            Margin="5,10"
+                            Padding="5,3"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding Foreground}"
+                            BorderThickness="1"
+                            CornerRadius="3">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                ContentSource="Content" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="#f9fdff" />
                                 <Setter Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -79,7 +113,7 @@
                         Click="btnSaveProfile_Click"
                         Content="Save Profile"
                         Foreground="#01a3fe"
-                        Style="{StaticResource forButton}" />
+                        Style="{StaticResource btnSaveToProfile}" />
                     <!--<Button
                         Background="Transparent"
                         Click="Button_Click_2"
@@ -107,7 +141,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20" />
                     <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition Width="450" />
                     <ColumnDefinition Width="0" />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
@@ -256,10 +290,12 @@
                                 FontSize="15"
                                 FontWeight="Light"
                                 SelectionChanged="cbProfile_SelectionChanged"
-                                Style="{StaticResource MaterialDesignComboBox}">
-                            </ComboBox>
+                                Style="{StaticResource MaterialDesignComboBox}" />
                         </StackPanel>
-                        <Grid x:Name="panelCVDisplay" Grid.Row="2" />
+                        <StackPanel
+                            x:Name="panelCVDisplay"
+                            Grid.Row="2"
+                            HorizontalAlignment="Center" />
                     </Grid>
                 </StackPanel>
             </Grid>

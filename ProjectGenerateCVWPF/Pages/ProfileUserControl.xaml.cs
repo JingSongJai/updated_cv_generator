@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,18 @@ namespace ProjectGenerateCVWPF.Pages
         public ProfileUserControl()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            string[] files = Directory.GetFiles("Profiles");
+
+            if (files.Length == 0) return;
+
+            foreach (string file in files)
+            {
+                panelDisplay.Children.Add(new ProfileItem() { Title = System.IO.Path.GetFileNameWithoutExtension(file) });
+            }
         }
     }
 }

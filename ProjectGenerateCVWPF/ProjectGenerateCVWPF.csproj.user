@@ -46,6 +46,9 @@
     <Compile Update="Pages\ProfileInformationUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\ProfileItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\ProfileUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +121,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\ProfileInformationUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ProfileItem.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\ProfileUserControl.xaml">

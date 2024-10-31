@@ -25,6 +25,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
+                            x:Name="borderBackground"
                             Width="130"
                             Margin="10,15"
                             Padding="15,5"
@@ -37,6 +38,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="#0192ff" />
                                 <Setter Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -49,7 +51,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition />
-            <RowDefinition Height="70" />
+            <RowDefinition Height="80" />
         </Grid.RowDefinitions>
         <Grid VerticalAlignment="Center">
             <Grid.ColumnDefinitions>

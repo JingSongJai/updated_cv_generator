@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using ProjectGenerateCVWPF.Pages;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -56,8 +57,22 @@ namespace ProjectGenerateCVWPF
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            //panelDisplay.Children.Clear();
-            //panelDisplay.Children.Add(App.templateMenu); 
+            string name = ((RadioButton)sender).Name;
+
+            switch (name)
+            {
+                case "templateMenu":
+                    panelDisplay.Children.Clear();
+                    panelDisplay.Children.Add(App.templateMenu);
+                    break; 
+                case "profileMenu":
+                    panelDisplay.Children.Clear();
+                    panelDisplay.Children.Add(new ProfileUserControl());
+                    break; 
+                case "aboutusMenu":
+                    break; 
+
+            }
         }
     }
 }

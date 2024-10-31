@@ -355,7 +355,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-3,-10,0,0">
+                        <StackPanel Margin="-3,-7,0,0">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Width="160"
@@ -412,7 +412,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,-10,0,-4">
+                        <StackPanel Margin="0,-7,0,-4">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Width="165"
@@ -451,6 +451,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
             <!--  Reference  -->
 
             <StackPanel
@@ -483,7 +484,7 @@
                 </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-5,-10,0,0">
+                        <StackPanel Margin="-5,-7,0,0">
                             <TextBlock
                                 Width="100"
                                 FontWeight="SemiBold"

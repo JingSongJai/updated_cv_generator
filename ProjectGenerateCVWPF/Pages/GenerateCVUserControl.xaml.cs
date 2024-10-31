@@ -22,7 +22,7 @@ namespace ProjectGenerateCVWPF.Pages
         private WorkExperienceUserControl workexperiencePage = new WorkExperienceUserControl();
         private ReferenceUserControl referencePage = new ReferenceUserControl();
         private SettingsUserControl settingsPage = new SettingsUserControl();
-        private ViewModel vm = new ViewModel();
+        internal ViewModel vm = new ViewModel();
         private string ext = ".png"; 
 
         public string SelectedTemplate { get; set; }
@@ -164,6 +164,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            setDataContexttoPages(); 
             switch (SelectedTemplate)
             {
                 case "Template1": 

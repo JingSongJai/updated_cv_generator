@@ -57,6 +57,13 @@ namespace ProjectGenerateCVWPF
                 EndYear = "2023",
                 MajorName = "Business Administration"
             });
+            sampleViewModel.Educations.Add(new Data.Educations()
+            {
+                SchoolName = "Royal University of Phnom Penh",
+                StartYear = "2022",
+                EndYear = "Present",
+                MajorName = "Information Technology (IT)"
+            });
 
             sampleViewModel.Languages.Add(new Data.Languages()
             {
@@ -82,6 +89,10 @@ namespace ProjectGenerateCVWPF
                 Name = "Traveling"
             });
 
+            sampleViewModel.Skills.Add(new Data.Skills() { Name = "Microsoft Words" });
+            sampleViewModel.Skills.Add(new Data.Skills() { Name = "Microsoft Excel" });
+            sampleViewModel.Skills.Add(new Data.Skills() { Name = "Microsoft PowerPoint" });
+
             sampleViewModel.WorkExperiences.Add(new Data.WorkExperiences()
             {
                 JobName = "Software Developer",
@@ -98,6 +109,15 @@ namespace ProjectGenerateCVWPF
                 EndYear = "2021",
                 Responsibility = "MegaCorp Solutions",
                 JobDescription = "Provided technical support for company-wide hardware and software issues. Assisted in network troubleshooting and maintenance."
+            });
+
+            sampleViewModel.WorkExperiences.Add(new Data.WorkExperiences()
+            {
+                JobName = "Junior/Business Consultant",
+                StartYear = "2015",
+                EndYear = "2020",
+                Responsibility = "Timmerman Industries",
+                JobDescription = "Developed, tested, and maintained web and mobile applications using C#, .NET, and JavaScript frameworks. Developed, tested, and maintained web"
             });
 
             sampleViewModel.References.Add(new Data.References()

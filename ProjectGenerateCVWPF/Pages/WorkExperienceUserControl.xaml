@@ -249,7 +249,8 @@
                                             FontFamily="{StaticResource Segoe UI}"
                                             FontSize="15"
                                             FontWeight="SemiBold"
-                                            Text="{Binding JobName}" />
+                                            Text="{Binding JobName}"
+                                            TextWrapping="Wrap"/>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal">
                                             <TextBlock
                                                 FontFamily="{StaticResource Segoe UI}"
@@ -272,12 +273,14 @@
                                             FontSize="13"
                                             FontStyle="Italic"
                                             FontWeight="SemiBold"
+                                            TextWrapping="Wrap"
                                             Text="{Binding Responsibility}" />
                                         <TextBlock
-                                            Width="{Binding ElementName=panel, Path=ActualWidth}"
+                                            Width="{Binding ElementName=experienceList, Path=ActualWidth}"
                                             FontFamily="{StaticResource Segoe UI}"
                                             FontSize="13"
-                                            Text="{Binding JobDescription}" />
+                                            Text="{Binding JobDescription}"
+                                            TextWrapping="Wrap"/>
                                     </StackPanel>
                                 </Grid>
                             </DataTemplate>

@@ -47,7 +47,8 @@
                             Text="CV Generator" />
                     </StackPanel>
                     <RadioButton
-                        Checked="RadioButton_Checked_1"
+                        x:Name="templateMenu"
+                        Click="RadioButton_Checked_1"
                         IsChecked="True"
                         Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
@@ -61,13 +62,18 @@
                             <TextBlock Style="{DynamicResource textMenu}" Text="Saved Template" />
                         </StackPanel>
                     </RadioButton>-->
-                    <RadioButton Style="{DynamicResource buttonMenu}">
+                    <RadioButton 
+                        x:Name="profileMenu"
+                        Click="RadioButton_Checked_1"
+                        Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
                             <fa:ImageAwesome Icon="UserCircle" Style="{StaticResource imageMenu}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Profiles" />
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Style="{DynamicResource buttonMenu}">
+                    <RadioButton x:Name="aboutusMenu"
+                                 Click="RadioButton_Checked_1"
+                                 Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
                             <fa:ImageAwesome Icon="InfoCircle" Style="{StaticResource imageMenu}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="About Us" />

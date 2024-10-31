@@ -201,7 +201,7 @@
                                 VerticalAlignment="Center"
                                 Orientation="Horizontal">
                                 <TextBlock
-                                    Width="170"
+                                    Width="100"
                                     Margin="5,0"
                                     VerticalAlignment="Center"
                                     FontSize="15"

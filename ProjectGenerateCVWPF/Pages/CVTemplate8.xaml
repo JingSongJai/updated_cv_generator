@@ -19,8 +19,7 @@
             Width="380"
             Height="90"
             Background="#d3dee7">
-            <StackPanel Margin="110 0 10 0"
-                        VerticalAlignment="Center">
+            <StackPanel Margin="110,0,10,0" VerticalAlignment="Center">
                 <TextBlock
                     Width="230"
                     Height="Auto"
@@ -51,9 +50,9 @@
             Canvas.Top="15"
             Width="120"
             Height="120"
-            CornerRadius="60"
+            BorderBrush="White"
             BorderThickness="5"
-            BorderBrush="White">
+            CornerRadius="60">
             <Border.Background>
                 <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
             </Border.Background>
@@ -264,7 +263,7 @@
                 ItemsSource="{Binding Languages}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10,-10,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="10,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Width="70"
                                 Foreground="#636c75"
@@ -392,18 +391,20 @@
                 Background="Transparent"
                 BorderThickness="0"
                 IsHitTestVisible="False"
-                ItemsSource="{Binding Educations}"
+                ItemsSource="{Binding WorkExperiences}"
                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-8,-10,0,0">
+                        <StackPanel Margin="0,-7,0,-4">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
-                                    Width="160"
+                                    Width="165"
+                                    Margin="-3,0,0,0"
+                                    FontWeight="SemiBold"
                                     Foreground="#636c75"
                                     Style="{DynamicResource headerText2}"
-                                    Text="{Binding MajorName}" />
+                                    Text="{Binding JobName}" />
                                 <TextBlock
                                     Foreground="#636c75"
                                     Style="{DynamicResource headerText2}"
@@ -419,10 +420,17 @@
                             </StackPanel>
                             <TextBlock
                                 Width="225"
+                                Margin="-7,0,0,0"
                                 FontStyle="Italic"
                                 Foreground="#636c75"
                                 Style="{DynamicResource descText2}"
-                                Text="{Binding SchoolName}" />
+                                Text="{Binding Responsibility}" />
+                            <TextBlock
+                                Width="225"
+                                Margin="-7,0,0,2"
+                                Foreground="#636c75"
+                                Style="{DynamicResource descText2}"
+                                Text="{Binding JobDescription}" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -461,7 +469,7 @@
                 </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-5,-10,0,0">
+                        <StackPanel Margin="-5,-7,0,0">
                             <TextBlock
                                 Width="100"
                                 FontWeight="SemiBold"

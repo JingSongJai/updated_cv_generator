@@ -8,13 +8,17 @@
     d:DesignHeight="710"
     d:DesignWidth="1000"
     Background="Transparent"
+    Loaded="UserControl_Loaded"
     mc:Ignorable="d">
     <Border Background="{StaticResource displayBackground}" CornerRadius="15">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="100" />
                 <RowDefinition />
             </Grid.RowDefinitions>
+
             <TextBlock
                 Margin="20,0"
                 VerticalAlignment="Center"
@@ -23,6 +27,25 @@
                 FontWeight="Bold"
                 Foreground="{StaticResource btnColor1}"
                 Text="Profile" />
+
+            <Border
+                Grid.Row="1"
+                Height="1"
+                Margin="10,0"
+                Background="{StaticResource appBackground}" />
+
+            <TextBlock
+                Grid.Row="2"
+                VerticalAlignment="Center"
+                FontSize="27"
+                Style="{StaticResource headerText}"
+                Text="Your Profile(s)"
+                TextAlignment="Center" />
+
+            <StackPanel
+                x:Name="panelDisplay"
+                Grid.Row="3"
+                Width="617" />
         </Grid>
     </Border>
 </UserControl>
