@@ -83,25 +83,23 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
-                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80" />
             </Grid.ColumnDefinitions>
             <TextBlock
                 x:Name="txtTemplateName"
-                VerticalAlignment="Center"
+                Padding="80,0,0,0"
                 HorizontalAlignment="Center"
+                VerticalAlignment="Center"
                 FontSize="18"
-                Padding="80 0 0 0"
                 FontWeight="Light"
                 Style="{StaticResource headerText2}"
-                Text="Save Profile"/>
+                Text="Save Profile" />
             <Button
                 Grid.Column="1"
-                Margin="0,0,20,0"
-                HorizontalAlignment="Right"
+                Margin="10,0,20,0"
+                Click="Button_Click"
                 Content="✕"
-                FontSize="15"
-                Style="{StaticResource btnBack}"
-                Click="Button_Click"/>
+                Style="{StaticResource operatorButton}" />
         </Grid>
         <TextBox
             x:Name="tbProfileName"
@@ -119,17 +117,19 @@
                 Margin="20,0,0,0"
                 HorizontalAlignment="Left"
                 Background="{StaticResource btnColor4}"
+                Click="Button_Click"
                 Content="Cancel"
                 Foreground="White"
-                Style="{StaticResource btnCancel}" Click="Button_Click" />
+                Style="{StaticResource btnCancel}" />
             <Button
                 Grid.Column="1"
                 Margin="0,0,20,0"
                 HorizontalAlignment="Right"
                 Background="{StaticResource btnColor2}"
+                Click="Button_Click_1"
                 Content="Save"
                 Foreground="White"
-                Style="{StaticResource btnSave}" Click="Button_Click_1" />
+                Style="{StaticResource btnSave}" />
         </Grid>
     </Grid>
 </Window>

@@ -105,6 +105,26 @@ namespace ProjectGenerateCVWPF.Pages
                     tmp = new CVTemplate9();
                     tmp.DataContext = App.sampleViewModel; 
                     break;
+                case "Template10":
+                    tmp = new CVTemplate10();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
+                case "Template11":
+                    tmp = new CVTemplate11();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
+                case "Template12":
+                    tmp = new CVTemplate12();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
+                case "Template13":
+                    tmp = new CVTemplate13();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
+                case "Template14":
+                    tmp = new CVTemplate14();
+                    tmp.DataContext = App.sampleViewModel; 
+                    break;
 
             }
             return tmp;

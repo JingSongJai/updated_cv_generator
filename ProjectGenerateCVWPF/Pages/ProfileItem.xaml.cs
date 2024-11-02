@@ -53,6 +53,8 @@ namespace ProjectGenerateCVWPF.Pages
 
             App.main.panelDisplay.Children.Clear();
             App.main.panelDisplay.Children.Add(new GenerateCVUserControl() { SelectedTemplate = "Template1", vm = JsonSerializer.Deserialize<ViewModel>(jsonString) });
+
+            App.main.templateMenu.IsChecked = true; 
         }
     }
 }

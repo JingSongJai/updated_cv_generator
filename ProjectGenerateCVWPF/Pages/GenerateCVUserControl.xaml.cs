@@ -230,6 +230,42 @@ namespace ProjectGenerateCVWPF.Pages
                     template9.DataContext = vm;
                     //App.maxSkill = template1.maxSkill; 
                     break;
+                case "Template10": 
+                    CVTemplate10 template10 = new CVTemplate10();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template10);
+                    template10.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+                case "Template11": 
+                    CVTemplate11 template11 = new CVTemplate11();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template11);
+                    template11.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+                case "Template12": 
+                    CVTemplate12 template12 = new CVTemplate12();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template12);
+                    template12.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+                case "Template13": 
+                    CVTemplate13 template13 = new CVTemplate13();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template13);
+                    template13.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+                case "Template14": 
+                    CVTemplate14 template14 = new CVTemplate14();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template14);
+                    template14.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+
             }
         }
 
@@ -293,6 +329,26 @@ namespace ProjectGenerateCVWPF.Pages
                 case "Template9":
                     panelCVDisplay.Children.Clear();
                     panelCVDisplay.Children.Add(new CVTemplate9() { DataContext = vm });
+                    break; 
+                case "Template10":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate10() { DataContext = vm });
+                    break; 
+                case "Template11":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate11() { DataContext = vm });
+                    break; 
+                case "Template12":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate12() { DataContext = vm });
+                    break; 
+                case "Template13":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate13() { DataContext = vm });
+                    break; 
+                case "Template14":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate14() { DataContext = vm });
                     break; 
 
             }

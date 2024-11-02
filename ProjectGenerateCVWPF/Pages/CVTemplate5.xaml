@@ -22,7 +22,6 @@
             Background="#175e92"
             CornerRadius="40">
             <StackPanel
-                Canvas.Top="10"
                 Width="424"
                 VerticalAlignment="Center">
                 <TextBlock

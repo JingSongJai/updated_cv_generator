@@ -10,6 +10,24 @@
     <Compile Update="Pages\CVTemplate1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\CVTemplate10.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CVTemplate11.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CVTemplate12.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CVTemplate13.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CVTemplate14.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CVTemplate15.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\CVTemplate2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +88,9 @@
     <Compile Update="Pages\SkillsUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\SplashScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\TemplateInterfaceUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +106,24 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\CVTemplate1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate10.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate11.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate12.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate13.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate14.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CVTemplate15.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\CVTemplate2.xaml">
@@ -145,6 +184,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SkillsUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SplashScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\TemplateInterfaceUserControl.xaml">

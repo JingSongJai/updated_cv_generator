@@ -15,14 +15,14 @@
         <Style x:Key="borderHover" TargetType="Border">
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="BorderThickness" Value="2" />
-                    <Setter Property="BorderBrush" Value="{StaticResource textColor}" />
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="BorderThickness" Value="0.5" />
+                    <Setter Property="BorderBrush" Value="Gray" />
                 </Trigger>
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
     <Border
-        Background="{StaticResource appBackground}"
         CornerRadius="10"
         Style="{StaticResource borderHover}">
         <StackPanel>

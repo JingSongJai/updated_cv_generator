@@ -333,6 +333,7 @@
                     Source="{Binding Profile.ImagePath}" />
             </Grid>
         </Border>
+        
         <Grid
             Canvas.Left="150"
             Canvas.Top="76"

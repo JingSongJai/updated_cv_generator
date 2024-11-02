@@ -19,7 +19,7 @@ namespace ProjectGenerateCVWPF
         public static int maxSkill = 0;
         internal static Data.ViewModel sampleViewModel;
 
-        protected override void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
             main = new MainWindow();
             sampleViewModel = new ViewModel()
@@ -39,7 +39,9 @@ namespace ProjectGenerateCVWPF
                     },
                     PlaceofBirth = "Prey Veng Commune, Prey Veng District, Prey Veng Province",
                     MaritalState = "Married",
-                    ImagePath = "pack://application:,,,/Images/default_photo.jpg"
+                    ImagePath = "pack://application:,,,/Images/default_photo.jpg",
+                    IsProfileVisible = true,
+                    AboutMe = "Aspiring mobile developer with skills in C#, C++, and Java, focused on Flutter. Passionate about user-friendly, efficient apps. Currently studying IT, eager to apply skills in impactful real-world projects."
                 },
             };
 
@@ -135,6 +137,13 @@ namespace ProjectGenerateCVWPF
                 Phone = "Phone: 023-456-7890",
                 Email = "Email: visal.sok@innovatex.com"
             });
+
+            //Pages.SplashScreen sc = new Pages.SplashScreen();
+            //sc.Show(); 
+            //Task.Run(() => {
+            //    Task.Delay(5000);
+            //});
+            //sc.Close(); 
             main.Show();
         }
 
