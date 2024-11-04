@@ -31,7 +31,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -39,8 +39,7 @@
             </Setter>
         </Style>
     </UserControl.Resources>
-    <Border Background="{StaticResource displayBackground}" 
-            CornerRadius="15">
+    <Border Background="{StaticResource displayBackground}" CornerRadius="15">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="70" />
@@ -80,7 +79,7 @@
                         Foreground="#01a3fe"
                         Style="{StaticResource forButton}"
                         Click="Button_Click"/>
-                    
+
                 </StackPanel>-->
             </Grid>
             <Border
@@ -88,7 +87,7 @@
                 Height="1"
                 Margin="10,0"
                 Background="{StaticResource appBackground}" />
-            <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <!--<StackPanel Grid.Row="2" Orientation="Horizontal">
                 <TextBlock
                     Margin="20,0,10,0"
                     VerticalAlignment="Center"
@@ -103,13 +102,13 @@
                 <RadioButton Content="Sreang Rathana" Style="{StaticResource cateButton}" />
                 <RadioButton Content="Sinh Porsou" Style="{StaticResource cateButton}" />
                 <RadioButton Content="Taing ChingSong" Style="{StaticResource cateButton}" />
-            </StackPanel>
+            </StackPanel>-->
             <ScrollViewer
                 Grid.Row="3"
+                HorizontalContentAlignment="Center"
                 CanContentScroll="True"
                 HorizontalScrollBarVisibility="Hidden"
-                VerticalScrollBarVisibility="Hidden"
-                HorizontalContentAlignment="Center">
+                VerticalScrollBarVisibility="Hidden">
                 <WrapPanel
                     x:Name="panelDisplay"
                     Width="{Binding ElementName=userControl, Path=ActualWidth}"

@@ -332,26 +332,26 @@
                         TextAlignment="Center" />
                 </Border>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Text="Nationality     :  " />
+                    <TextBlock Margin="3 0 0 0" Style="{DynamicResource headerText2}" Text="Nationality     :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.Nationality}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Text="Sex                 :  " />
+                    <TextBlock Margin="3 0 0 0" Style="{DynamicResource headerText2}" Text="Sex                 :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.Gender}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Text="Date of Birth  :  " />
+                    <TextBlock Margin="3 0 0 0" Style="{DynamicResource headerText2}" Text="Date of Birth  :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Text="Place of Birth :  " />
+                    <TextBlock Margin="3 0 0 0" Style="{DynamicResource headerText2}" Text="Place of Birth :  " />
                     <TextBlock
                         Width="160"
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Text="Marital Status :  " />
+                    <TextBlock Margin="3 0 0 0" Style="{DynamicResource headerText2}" Text="Marital Status :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.MaritalState}" />
                 </StackPanel>
             </StackPanel>
@@ -383,7 +383,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-8,-7,0,0">
+                        <StackPanel Margin="-5,-7,0,0">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Width="160"

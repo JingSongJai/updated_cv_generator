@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Pages\AboutUsUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\CVTemplate1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +61,9 @@
     <Compile Update="Pages\GenerateCVUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\ImageDisplayUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\LanguageUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -103,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\AboutUsUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\CVTemplate1.xaml">
@@ -154,6 +163,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\GenerateCVUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ImageDisplayUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\LanguageUserControl.xaml">

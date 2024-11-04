@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="424"
     Height="600"
@@ -88,10 +89,10 @@
 
             <StackPanel Grid.Row="1">
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="18"
-                        Margin="5,3"
-                        Source="/Images/phone (2).png" />
+                    <materialDesign:PackIcon
+                        Margin="0,0,3,0"
+                        Foreground="#646464"
+                        Kind="Phone" />
                     <TextBlock
                         x:Name="txtPhone"
                         Width="110"
@@ -101,10 +102,10 @@
                         Text="{Binding Profile.Phone}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="18"
-                        Margin="5,3"
-                        Source="/Images/email (2).png" />
+                    <materialDesign:PackIcon
+                        Margin="0,0,3,0"
+                        Foreground="#646464"
+                        Kind="Email" />
                     <TextBlock
                         x:Name="txtEmail"
                         Width="110"
@@ -114,11 +115,10 @@
                         Text="{Binding Profile.Email}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="18"
-                        Margin="5,3"
-                        VerticalAlignment="Top"
-                        Source="/Images/location (2).png" />
+                    <materialDesign:PackIcon
+                        Margin="0,0,3,0"
+                        Foreground="#646464"
+                        Kind="Location" />
                     <TextBlock
                         x:Name="txtLocation"
                         Width="110"
@@ -191,9 +191,9 @@
                 ItemsSource="{Binding Skills}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="7,-10,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="-2,-10,0,-5" Orientation="Horizontal">
                             <TextBlock
-                                Margin="5,0"
+                                Margin="0 0 5 0"
                                 FontSize="8"
                                 Foreground="#646464"
                                 Text="●"
@@ -233,7 +233,7 @@
                 ItemsSource="{Binding Languages}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10,-10,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="-2,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Width="70"
                                 Foreground="#646464"
@@ -276,7 +276,7 @@
                         TextAlignment="Left" />
                     <Border Height="0.5" Background="#646464" />
                 </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#646464"
                         Style="{DynamicResource headerText2}"
@@ -286,7 +286,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Nationality}" />
                 </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#646464"
                         Style="{DynamicResource headerText2}"
@@ -296,7 +296,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Gender}" />
                 </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#646464"
                         Style="{DynamicResource headerText2}"
@@ -306,7 +306,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
                 </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#646464"
                         Style="{DynamicResource headerText2}"
@@ -317,7 +317,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#646464"
                         Style="{DynamicResource headerText2}"
@@ -451,7 +451,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+
             <!--  Reference  -->
 
             <StackPanel

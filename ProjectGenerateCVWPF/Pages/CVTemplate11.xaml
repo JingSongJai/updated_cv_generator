@@ -92,7 +92,7 @@
                                 Text="●"
                                 TextAlignment="Center" />
                             <TextBlock
-                                Width="60"
+                                Width="80"
                                 Margin="0,2"
                                 Foreground="#404040"
                                 Style="{StaticResource descText1}"
@@ -218,6 +218,7 @@
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
+                        Margin="3 0 0 0"
                         Style="{DynamicResource headerText2}"
                         Text="Nationality     :  " />
                     <TextBlock
@@ -228,6 +229,7 @@
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
+                        Margin="3 0 0 0"
                         Style="{DynamicResource headerText2}"
                         Text="Sex                 :  " />
                     <TextBlock
@@ -238,6 +240,7 @@
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
+                        Margin="3 0 0 0"
                         Style="{DynamicResource headerText2}"
                         Text="Date of Birth  :  " />
                     <TextBlock
@@ -248,6 +251,7 @@
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
+                        Margin="3 0 0 0"
                         Style="{DynamicResource headerText2}"
                         Text="Place of Birth :  " />
                     <TextBlock
@@ -259,6 +263,7 @@
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
+                        Margin="3 0 0 0"
                         Style="{DynamicResource headerText2}"
                         Text="Marital Status :  " />
                     <TextBlock

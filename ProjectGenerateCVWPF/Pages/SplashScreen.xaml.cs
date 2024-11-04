@@ -21,13 +21,46 @@ namespace ProjectGenerateCVWPF.Pages
     {
         public string Title
         {
-            get { return txtTitle.Text; }
-            set { txtTitle.Text = value; }
+            get { return txtTeamName.Text; }
+            set { txtTeamName.Text = value; }
         }
 
         public SplashScreen()
         {
             InitializeComponent();
+        }
+
+        private async Task showTeamName()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                txtTeamName.Text += "G ";
+
+                Thread.Sleep(200);
+
+                txtTeamName.Text += "R ";
+
+                Thread.Sleep(200);
+
+                txtTeamName.Text += "O ";
+
+                Thread.Sleep(200);
+
+                txtTeamName.Text += "U ";
+
+                Thread.Sleep(200);
+
+                txtTeamName.Text += "P ";
+
+                Thread.Sleep(200);
+
+                txtTeamName.Text += "6 ";
+            });
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //await Task.Run(() => showTeamName());
         }
     }
 }

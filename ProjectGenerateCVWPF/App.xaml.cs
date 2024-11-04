@@ -139,11 +139,9 @@ namespace ProjectGenerateCVWPF
             });
 
             //Pages.SplashScreen sc = new Pages.SplashScreen();
-            //sc.Show(); 
-            //Task.Run(() => {
-            //    Task.Delay(5000);
-            //});
-            //sc.Close(); 
+            //sc.Show();
+            //await Task.Delay(5000);
+            //sc.Close();
             main.Show();
         }
 

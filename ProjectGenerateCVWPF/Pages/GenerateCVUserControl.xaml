@@ -151,61 +151,61 @@
                         Click="profile_Click"
                         IsChecked="True"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
-                            Width="20"
-                            Height="20"
-                            Icon="User"
-                            Style="{StaticResource imageMenu}" />
+                        <materialDesign:PackIcon
+                            Width="25"
+                            Height="25"
+                            Kind="UserCircle"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>
                     <RadioButton
                         x:Name="skills"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
+                        <materialDesign:PackIcon
                             Width="25"
                             Height="25"
-                            Icon="LightbulbOutline"
-                            Style="{StaticResource imageMenu}" />
+                            Kind="Settings"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>
                     <RadioButton
                         x:Name="languages"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
+                        <materialDesign:PackIcon
                             Width="25"
                             Height="25"
-                            Icon="Language"
-                            Style="{StaticResource imageMenu}" />
+                            Kind="Language"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>
                     <RadioButton
                         x:Name="educations"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
+                        <materialDesign:PackIcon
                             Width="25"
                             Height="25"
-                            Icon="GraduationCap"
-                            Style="{StaticResource imageMenu}" />
+                            Kind="School"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>
                     <RadioButton
                         x:Name="experiences"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
+                        <materialDesign:PackIcon
                             Width="25"
                             Height="25"
-                            Icon="Briefcase"
-                            Style="{StaticResource imageMenu}" />
+                            Kind="Work"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>
                     <RadioButton
                         x:Name="references"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
+                        <materialDesign:PackIcon
                             Width="25"
                             Height="25"
-                            Icon="AddressBook"
-                            Style="{StaticResource imageMenu}" />
+                            Kind="TextBox"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>
                     <!--<RadioButton
                         x:Name="settings"

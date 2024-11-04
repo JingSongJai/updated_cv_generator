@@ -505,7 +505,7 @@
 
         <!--  Contact  -->
 
-        <StackPanel Canvas.Left="5" Canvas.Bottom="15">
+        <StackPanel Canvas.Left="5" Canvas.Bottom="10">
             <StackPanel Orientation="Horizontal">
                 <Image
                     Width="10"
@@ -514,7 +514,7 @@
                     Source="/Images/location.png" />
                 <TextBlock
                     x:Name="txtLocation"
-                    Width="130"
+                    Width="170"
                     VerticalAlignment="Center"
                     Foreground="White"
                     Style="{StaticResource descText1}"

@@ -1,4 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <!--#region TextBox Name-->
     <Style x:Key="tbName" TargetType="TextBox">
@@ -21,10 +24,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/name.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="User" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -82,10 +87,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/position.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="CardAccountDetails" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -143,10 +150,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/nationality.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Flag" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -204,10 +213,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/location (2).png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Location" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -265,10 +276,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/phone (2).png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Phone" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -326,10 +339,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/email (2).png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Email" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -388,11 +403,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="25"
-                                Height="25"
-                                VerticalAlignment="Top"
-                                Source="/Images/information.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Information" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -452,10 +468,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/skills.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Settings" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -513,10 +531,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/language.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Language" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -574,10 +594,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/subject.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Goal" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -635,10 +657,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/education.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="School" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -696,10 +720,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/calender.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="DateRange" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -757,10 +783,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/workexperience.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Work" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -818,10 +846,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/reference.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Draft" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"
@@ -879,10 +909,12 @@
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Image
-                                Width="27"
-                                Height="27"
-                                Source="/Images/company.png" />
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource btnColor2}"
+                                Kind="Company" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
                                 Grid.Column="1"

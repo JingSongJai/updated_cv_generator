@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:ProjectGenerateCVWPF"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
     Width="1360"
@@ -18,7 +19,8 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Closing="Window_Closing">
     <Border
         x:Name="borderBackground"
         Background="{StaticResource appBackground}"
@@ -52,7 +54,7 @@
                         IsChecked="True"
                         Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="AddressCard" Style="{StaticResource imageMenu}" />
+                            <materialDesign:PackIcon Kind="PaperOutline" Style="{StaticResource menuIcon}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Template" />
                         </StackPanel>
                     </RadioButton>
@@ -62,26 +64,30 @@
                             <TextBlock Style="{DynamicResource textMenu}" Text="Saved Template" />
                         </StackPanel>
                     </RadioButton>-->
-                    <RadioButton 
+                    <RadioButton
                         x:Name="profileMenu"
                         Click="RadioButton_Checked_1"
                         Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="UserCircle" Style="{StaticResource imageMenu}" />
+                            <materialDesign:PackIcon Kind="UserCircleOutline" Style="{StaticResource menuIcon}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Profiles" />
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton x:Name="aboutusMenu"
-                                 Click="RadioButton_Checked_1"
-                                 Style="{DynamicResource buttonMenu}">
+                    <RadioButton
+                        x:Name="aboutusMenu"
+                        Click="RadioButton_Checked_1"
+                        Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="InfoCircle" Style="{StaticResource imageMenu}" />
+                            <materialDesign:PackIcon Kind="AboutCircleOutline" Style="{StaticResource menuIcon}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="About Us" />
                         </StackPanel>
                     </RadioButton>
-                    <RadioButton Checked="RadioButton_Checked" Style="{DynamicResource buttonMenu}">
+                    <RadioButton
+                        x:Name="exitMenu"
+                        Checked="RadioButton_Checked"
+                        Style="{DynamicResource buttonMenu}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:ImageAwesome Icon="ArrowCircleLeft" Style="{StaticResource imageMenu}" />
+                            <materialDesign:PackIcon Kind="CloseCircleOutline" Style="{StaticResource menuIcon}" />
                             <TextBlock Style="{DynamicResource textMenu}" Text="Exit" />
                         </StackPanel>
                     </RadioButton>

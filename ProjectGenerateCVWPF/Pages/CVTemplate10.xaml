@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="424"
     Height="600"
@@ -24,8 +25,10 @@
             Width="414"
             Height="120"
             Background="#5b8e8f">
-            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center"
-                        Margin="0 5">
+            <StackPanel
+                Margin="0,5"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center">
                 <TextBlock
                     Width="240"
                     Height="Auto"
@@ -92,9 +95,9 @@
 
             <!--  About Me  -->
 
-            <StackPanel Margin="0 0 0 5" VerticalAlignment="Bottom">
+            <StackPanel Margin="0,0,0,5" VerticalAlignment="Bottom">
                 <TextBlock
-                    Margin="0 0 0 3"
+                    Margin="0,0,0,3"
                     FontSize="12"
                     FontWeight="SemiBold"
                     Foreground="#1e1e1e"
@@ -131,40 +134,39 @@
 
             <StackPanel Grid.Row="3">
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="18"
-                        Margin="5,3"
-                        Source="/Images/phone (2).png" />
+                    <materialDesign:PackIcon
+                        Margin="0,0,3,0"
+                        Foreground="#1e1e1e"
+                        Kind="Phone" />
                     <TextBlock
                         x:Name="txtPhone"
-                        Width="110"
+                        Width="120"
                         VerticalAlignment="Center"
                         Foreground="#646464"
                         Style="{StaticResource descText1}"
                         Text="{Binding Profile.Phone}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="18"
-                        Margin="5,3"
-                        Source="/Images/email (2).png" />
+                    <materialDesign:PackIcon
+                        Margin="0,0,3,0"
+                        Foreground="#1e1e1e"
+                        Kind="Email" />
                     <TextBlock
                         x:Name="txtEmail"
-                        Width="110"
+                        Width="120"
                         VerticalAlignment="Center"
                         Foreground="#646464"
                         Style="{StaticResource descText1}"
                         Text="{Binding Profile.Email}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="18"
-                        Margin="5,3"
-                        VerticalAlignment="Top"
-                        Source="/Images/location (2).png" />
+                    <materialDesign:PackIcon
+                        Margin="0,0,3,0"
+                        Foreground="#1e1e1e"
+                        Kind="Location" />
                     <TextBlock
                         x:Name="txtLocation"
-                        Width="110"
+                        Width="120"
                         VerticalAlignment="Center"
                         Foreground="#646464"
                         Style="{StaticResource descText1}"
@@ -210,9 +212,9 @@
                 ItemsSource="{Binding Skills}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="7,-7,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="-3,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
-                                Margin="5,0"
+                                Margin="0 0 5 0"
                                 FontSize="8"
                                 Foreground="#646464"
                                 Text="●"
@@ -252,7 +254,7 @@
                 ItemsSource="{Binding Languages}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10,-7,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="-2,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Width="70"
                                 Foreground="#646464"
@@ -455,14 +457,14 @@
                             </StackPanel>
                             <TextBlock
                                 Width="225"
-                                Margin="-7,0,0,0"
+                                Margin="-4,0,0,0"
                                 FontStyle="Italic"
                                 Foreground="#646464"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Responsibility}" />
                             <TextBlock
-                                Width="230"
-                                Margin="-7,0,0,2"
+                                Width="225"
+                                Margin="-4,0,0,2"
                                 Foreground="#646464"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding JobDescription}" />
@@ -503,7 +505,7 @@
                 </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-5,-7,0,0">
+                        <StackPanel Margin="-2,-7,0,0">
                             <TextBlock
                                 Width="100"
                                 FontWeight="SemiBold"

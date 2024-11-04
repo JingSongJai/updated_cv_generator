@@ -47,7 +47,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(tbSkillName.Text)) vm.Skills.Add(new Skills() { Name = tbSkillName.Text });
+            vm.Skills.Add(new Skills() { Name = tbSkillName.Text });
             tbSkillName.Clear();
             borderDisplay.Visibility = Visibility.Collapsed;
         }

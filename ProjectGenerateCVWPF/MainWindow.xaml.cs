@@ -1,4 +1,5 @@
-﻿using ProjectGenerateCVWPF.Pages;
+﻿using Org.BouncyCastle.Tls.Crypto.Impl.BC;
+using ProjectGenerateCVWPF.Pages;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -70,9 +71,17 @@ namespace ProjectGenerateCVWPF
                     panelDisplay.Children.Add(new ProfileUserControl());
                     break; 
                 case "aboutusMenu":
+                    panelDisplay.Children.Clear();
+                    panelDisplay.Children.Add(new AboutUsUserControl()); 
+                    break;
+                case "exitMenu":
                     break; 
-
             }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

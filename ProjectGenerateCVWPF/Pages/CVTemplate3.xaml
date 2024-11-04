@@ -141,7 +141,6 @@
 
                 <ListView
                     Grid.Row="8"
-                    Margin="5,0"
                     Background="Transparent"
                     BorderThickness="0"
                     IsHitTestVisible="False"

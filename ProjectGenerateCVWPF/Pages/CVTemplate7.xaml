@@ -70,8 +70,7 @@
                 Margin="10,0,0,0"
                 Foreground="#3c406f"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}"
-                TextAlignment="Center" />
+                Text="{Binding Profile.AboutMe}" />
 
             <!--  Contact  -->
 
@@ -94,7 +93,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image
                         Width="15"
-                        Margin="5,3"
+                        Margin="5,0"
                         Source="/Images/phone (2).png" />
                     <TextBlock
                         x:Name="txtPhone"
@@ -107,7 +106,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image
                         Width="15"
-                        Margin="5,3"
+                        Margin="5,0"
                         Source="/Images/email (2).png" />
                     <TextBlock
                         x:Name="txtEmail"
@@ -120,7 +119,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image
                         Width="15"
-                        Margin="5,3"
+                        Margin="5,0"
                         VerticalAlignment="Top"
                         Source="/Images/location (2).png" />
                     <TextBlock
@@ -171,7 +170,7 @@
                 ItemsSource="{Binding Skills}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="7,-10,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="7,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Margin="5,0"
                                 FontSize="8"
@@ -214,7 +213,7 @@
                 ItemsSource="{Binding Languages}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10,-10,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="10,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Width="60"
                                 Foreground="#3c406f"
@@ -293,7 +292,6 @@
 
         <StackPanel Canvas.Left="185" Canvas.Top="30">
             <TextBlock
-                TextAlignment="Left"
                 Width="230"
                 Height="Auto"
                 VerticalAlignment="Center"
@@ -302,10 +300,10 @@
                 FontWeight="Bold"
                 Foreground="#3c406f"
                 Text="{Binding Profile.Name}"
+                TextAlignment="Left"
                 TextWrapping="Wrap" />
 
             <TextBlock
-                TextAlignment="Left"
                 Width="230"
                 Height="Auto"
                 VerticalAlignment="Center"
@@ -313,6 +311,7 @@
                 FontSize="14"
                 Foreground="#3c406f"
                 Text="{Binding Profile.Position}"
+                TextAlignment="Left"
                 TextWrapping="Wrap" />
         </StackPanel>
         <Grid
@@ -343,29 +342,56 @@
                         Text="Profile"
                         TextAlignment="Left" />
                 </Border>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="Nationality     :  " />
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding Profile.Nationality}" />
-                </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="Sex                 :  " />
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding Profile.Gender}" />
-                </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="Date of Birth  :  " />
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
-                </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="Place of Birth :  " />
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="Nationality     :  " />
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.Nationality}" />
+                </StackPanel>
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="Sex                 :  " />
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.Gender}" />
+                </StackPanel>
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="Date of Birth  :  " />
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                </StackPanel>
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="Place of Birth :  " />
+                    <TextBlock
                         Width="160"
+                        Foreground="#3c406f"
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
-                <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="Marital Status :  " />
-                    <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding Profile.MaritalState}" />
+                <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="Marital Status :  " />
+                    <TextBlock
+                        Foreground="#3c406f"
+                        Style="{DynamicResource headerText2}"
+                        Text="{Binding Profile.MaritalState}" />
                 </StackPanel>
             </StackPanel>
 
@@ -399,18 +425,27 @@
                         <StackPanel Margin="-3,-7,0,0">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
-                                    Foreground="#3c406f"
                                     Width="160"
+                                    Foreground="#3c406f"
                                     Style="{DynamicResource headerText2}"
                                     Text="{Binding MajorName}" />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding StartYear}" />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text=" - " />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding EndYear}" />
+                                <TextBlock
+                                    Foreground="#3c406f"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding StartYear}" />
+                                <TextBlock
+                                    Foreground="#3c406f"
+                                    Style="{DynamicResource headerText2}"
+                                    Text=" - " />
+                                <TextBlock
+                                    Foreground="#3c406f"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding EndYear}" />
                             </StackPanel>
                             <TextBlock
-                                Foreground="#3c406f"
                                 Width="225"
                                 FontStyle="Italic"
+                                Foreground="#3c406f"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding SchoolName}" />
                         </StackPanel>
@@ -448,27 +483,36 @@
                         <StackPanel Margin="0,-7,0,-4">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
-                                    Foreground="#3c406f"
                                     Width="165"
                                     Margin="-3,0,0,0"
                                     FontWeight="SemiBold"
+                                    Foreground="#3c406f"
                                     Style="{DynamicResource headerText2}"
                                     Text="{Binding JobName}" />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding StartYear}" />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text=" - " />
-                                <TextBlock Style="{DynamicResource headerText2}" Foreground="#3c406f" Text="{Binding EndYear}" />
+                                <TextBlock
+                                    Foreground="#3c406f"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding StartYear}" />
+                                <TextBlock
+                                    Foreground="#3c406f"
+                                    Style="{DynamicResource headerText2}"
+                                    Text=" - " />
+                                <TextBlock
+                                    Foreground="#3c406f"
+                                    Style="{DynamicResource headerText2}"
+                                    Text="{Binding EndYear}" />
                             </StackPanel>
                             <TextBlock
-                                Foreground="#3c406f"
                                 Width="225"
                                 Margin="-7,0,0,0"
                                 FontStyle="Italic"
+                                Foreground="#3c406f"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Responsibility}" />
                             <TextBlock
-                                Foreground="#3c406f"
                                 Width="225"
                                 Margin="-7,0,0,2"
+                                Foreground="#3c406f"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding JobDescription}" />
                         </StackPanel>

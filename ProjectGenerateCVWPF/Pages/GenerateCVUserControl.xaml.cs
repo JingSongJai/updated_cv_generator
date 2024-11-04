@@ -265,6 +265,13 @@ namespace ProjectGenerateCVWPF.Pages
                     template14.DataContext = vm;
                     //App.maxSkill = template1.maxSkill; 
                     break;
+                case "Template15": 
+                    CVTemplate15 template15 = new CVTemplate15();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template15);
+                    template15.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
 
             }
         }
@@ -350,6 +357,10 @@ namespace ProjectGenerateCVWPF.Pages
                     panelCVDisplay.Children.Clear();
                     panelCVDisplay.Children.Add(new CVTemplate14() { DataContext = vm });
                     break; 
+                case "Template15":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate15() { DataContext = vm });
+                    break; 
 
             }
         }
@@ -433,7 +444,9 @@ namespace ProjectGenerateCVWPF.Pages
             vm = JsonSerializer.Deserialize<ViewModel>(jsonString);
 
             (panelCVDisplay.Children[0] as Control).DataContext = vm;
-            setDataContexttoPages(); 
+            setDataContexttoPages();
+            profile.IsChecked = true; 
+            profile_Click(profile, null); 
         }
     }
 }
