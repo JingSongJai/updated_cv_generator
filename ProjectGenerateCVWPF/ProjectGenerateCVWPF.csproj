@@ -13,17 +13,21 @@
     <None Remove="Fonts\calibri.ttf" />
     <None Remove="Fonts\GARA.TTF" />
     <None Remove="Fonts\georgia.ttf" />
+    <None Remove="Fonts\KantumruyPro.ttf" />
     <None Remove="Fonts\Poppins-Regular.ttf" />
     <None Remove="Fonts\Roboto-Regular.ttf" />
     <None Remove="Fonts\segoeui.ttf" />
     <None Remove="Fonts\times.ttf" />
     <None Remove="Fonts\verdana.ttf" />
     <None Remove="Images\addimage.png" />
+    <None Remove="Images\ant.jpg" />
     <None Remove="Images\calender.png" />
+    <None Remove="Images\cbrd.png" />
     <None Remove="Images\company.png" />
     <None Remove="Images\cv_icon.ico" />
     <None Remove="Images\cv_images.png" />
     <None Remove="Images\cv_template.png" />
+    <None Remove="Images\dalen.jpg" />
     <None Remove="Images\default_photo.jpg" />
     <None Remove="Images\education.png" />
     <None Remove="Images\email %282%29.png" />
@@ -32,6 +36,7 @@
     <None Remove="Images\language.png" />
     <None Remove="Images\location %282%29.png" />
     <None Remove="Images\location.png" />
+    <None Remove="Images\mptc.png" />
     <None Remove="Images\name.png" />
     <None Remove="Images\nationality.png" />
     <None Remove="Images\person.jpg" />
@@ -60,6 +65,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\georgia.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\KantumruyPro.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Fonts\Roboto-Regular.ttf">
@@ -93,13 +101,22 @@
     <Resource Include="Images\addimage.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\ant.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\calender.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\cbrd.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\company.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\cv_template.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\dalen.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\default_photo.jpg">
@@ -118,6 +135,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\location (2).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\mptc.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\name.png">

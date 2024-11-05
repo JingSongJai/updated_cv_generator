@@ -16,20 +16,68 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
+                <ColumnDefinition Width="1" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <StackPanel VerticalAlignment="Center">
+            <StackPanel VerticalAlignment="Bottom" />
+            <Border
+                Grid.Row="1"
+                Width="450"
+                Height="320"
+                VerticalAlignment="Center"
+                Background="White"
+                BorderBrush="Gray"
+                BorderThickness="0.5"
+                CornerRadius="10" />
+            <StackPanel Grid.Row="1">
                 <TextBlock
-                    Width="400"
+                    Width="450"
+                    Margin="0,75,0,0"
+                    FontFamily="{StaticResource Segoe UI}"
+                    FontSize="70"
+                    FontWeight="Bold"
+                    Foreground="{StaticResource btnColor2}"
+                    Text="Dear" />
+                <TextBlock
+                    Width="445"
+                    Margin="0,0,0,10"
+                    FontFamily="{StaticResource Segoe UI}"
+                    FontSize="20"
+                    FontWeight="Light"
+                    Text="Ministry of Post and Telecommunication" />
+                <TextBlock
+                    Width="420"
+                    Margin="0,20"
+                    VerticalAlignment="Top"
                     FontFamily="{StaticResource Poppins}"
                     FontSize="15"
                     FontWeight="Light"
-                    Foreground="Gray"
-                    Text="Dear Ministry of Post abd Telecommunication We're the scholarship students at ANT Technology Training Center, specializing in Mobile Application study for 11 months from 19 February 2024 to December 2024. This opportunity has been invaluable, providing us with the financial support and opportunity to develop our skills and make a positive impact on our society. Your generosity has not only eased our financial burdens but also inspired us to work harder and aim higher. The faith you have shown in our potential motivates us to achieve our goals and contribute positively to our community anc Thank you once again for your unwavering support and belief in our abilities. We' committed to making the most of this opportunity and hope to make you proud. From [Group 6]"
+                    Foreground="Black"
+                    Text="We're the scholarship students at ANT Technology Training Center, specializing in Mobile Application study for 11 months from 19 February 2024 to December 2024. This opportunity has been invaluable, providing us with the financial support and opportunity to develop our skills and make a positive impact on our society. Your generosity has not only eased our financial burdens but also inspired us to work harder and aim higher. The faith you have shown in our potential motivates us to achieve our goals and contribute positively to our community anc Thank you once again for your unwavering support and belief in our abilities. We' committed to making the most of this opportunity and hope to make you proud. From [Group 6]"
                     TextAlignment="Justify"
                     TextWrapping="Wrap" />
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image
+                        Width="50"
+                        Margin="20,0"
+                        VerticalAlignment="Top"
+                        Source="/Images/mptc.png" />
+                    <Image
+                        Width="130"
+                        Margin="20,0"
+                        VerticalAlignment="Top"
+                        Source="/Images/cbrd.png" />
+                    <Image
+                        Height="50"
+                        Margin="20,5,0,0"
+                        Source="/Images/ant.jpg" />
+                </StackPanel>
             </StackPanel>
-            <Border Grid.Column="1" Padding="0,100,0,100">
+            <Border
+                Grid.Column="1"
+                Width="0.2"
+                Background="Gray" />
+            <Border Grid.Column="2" Padding="0,140,0,140">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50" />
@@ -55,9 +103,9 @@
                     <StackPanel
                         x:Name="panelDisplay"
                         Grid.Row="1"
+                        HorizontalAlignment="Center"
                         VerticalAlignment="Top"
-                        Orientation="Horizontal"
-                        HorizontalAlignment="Center"/>
+                        Orientation="Horizontal" />
                     <StackPanel
                         Grid.Row="2"
                         HorizontalAlignment="Center"
@@ -79,9 +127,9 @@
                     <StackPanel
                         x:Name="panelDisplay1"
                         Grid.Row="3"
+                        HorizontalAlignment="Center"
                         VerticalAlignment="Top"
-                        Orientation="Horizontal"
-                        HorizontalAlignment="Center"/>
+                        Orientation="Horizontal" />
                 </Grid>
             </Border>
         </Grid>

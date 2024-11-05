@@ -63,8 +63,8 @@
             <StackPanel Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
                 <StackPanel Margin="0,3" Orientation="Horizontal">
                     <materialDesign:PackIcon
-                        Margin="3,0"
                         Height="20"
+                        Margin="3,0"
                         Foreground="#333333"
                         Kind="UserCircle" />
                     <TextBlock
@@ -135,8 +135,8 @@
                 Margin="0,2"
                 Orientation="Horizontal">
                 <materialDesign:PackIcon
-                    Margin="3,0"
                     Height="20"
+                    Margin="3,0"
                     Foreground="#333333"
                     Kind="University" />
                 <TextBlock
@@ -196,11 +196,12 @@
                 Margin="0,2"
                 Orientation="Horizontal">
                 <materialDesign:PackIcon
-                    Margin="3,0"
                     Height="20"
+                    Margin="3,0"
                     Foreground="#333333"
                     Kind="Work" />
                 <TextBlock
+                    VerticalAlignment="Center"
                     FontSize="12"
                     FontWeight="SemiBold"
                     Foreground="#333333"
@@ -266,11 +267,12 @@
                 Margin="0,2"
                 Orientation="Horizontal">
                 <materialDesign:PackIcon
-                    Margin="3,0"
                     Height="20"
+                    Margin="3,0"
                     Foreground="#333333"
                     Kind="Draft" />
                 <TextBlock
+                    VerticalAlignment="Center"
                     FontSize="12"
                     FontWeight="SemiBold"
                     Foreground="#333333"
@@ -380,18 +382,18 @@
                 HorizontalAlignment="Center"
                 Orientation="Horizontal">
                 <materialDesign:PackIcon
-                    Margin="3,0"
                     Height="20"
+                    Margin="3,0"
                     Foreground="White"
                     Kind="Language" />
                 <TextBlock
+                    VerticalAlignment="Center"
                     FontSize="12"
                     FontWeight="SemiBold"
                     Foreground="White"
                     Style="{StaticResource headerText}"
                     Text="Language"
-                    TextAlignment="Left"
-                    VerticalAlignment="Center"/>
+                    TextAlignment="Left" />
             </StackPanel>
 
             <ListView
@@ -428,18 +430,18 @@
                 HorizontalAlignment="Center"
                 Orientation="Horizontal">
                 <materialDesign:PackIcon
-                    Margin="3,0"
                     Height="20"
+                    Margin="3,0"
                     Foreground="White"
                     Kind="Settings" />
                 <TextBlock
+                    VerticalAlignment="Center"
                     FontSize="12"
                     FontWeight="SemiBold"
                     Foreground="White"
                     Style="{StaticResource headerText}"
                     Text="Skill"
-                    TextAlignment="Left" 
-                    VerticalAlignment="Center"/>
+                    TextAlignment="Left" />
             </StackPanel>
 
             <ListView
@@ -480,8 +482,8 @@
                 HorizontalAlignment="Center"
                 Orientation="Horizontal">
                 <materialDesign:PackIcon
-                    Margin="3,0"
                     Height="20"
+                    Margin="3,0"
                     Foreground="#333333"
                     Kind="UserCircle" />
                 <TextBlock
