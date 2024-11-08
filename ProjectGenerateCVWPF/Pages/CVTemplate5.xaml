@@ -61,7 +61,7 @@
             BorderThickness="3"
             CornerRadius="60">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
         <Grid Canvas.Top="140" Width="150">
@@ -102,7 +102,8 @@
                 HorizontalAlignment="Left"
                 Foreground="Black"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}"
+                TextAlignment="Justify"/>
 
             <!--  Contact  -->
 

@@ -223,7 +223,7 @@
             Height="110"
             CornerRadius="10">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
 
@@ -263,7 +263,8 @@
                 HorizontalAlignment="Left"
                 Foreground="White"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}" 
+                TextAlignment="Justify"/>
 
             <!--  Contact  -->
 

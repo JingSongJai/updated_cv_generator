@@ -32,14 +32,14 @@ namespace ProjectGenerateCVWPF
                     CurrentPlace = "Khan Chbar Ampov, Phnom Penh",
                     Nationality = "Khmer",
                     Gender = "Male",
-                    CustomGender = new ObservableCollection<string>()
-                    {
-                        "Male",
-                        "Female"
-                    },
+                    //CustomGender = new ObservableCollection<string>()
+                    //{
+                    //    "Male",
+                    //    "Female"
+                    //},
                     PlaceofBirth = "Prey Veng Commune, Prey Veng District, Prey Veng Province",
                     MaritalState = "Married",
-                    ImagePath = "pack://application:,,,/Images/default_photo.jpg",
+                    ImagePath = "pack://application:,,,/Images/makara.jpg",
                     IsProfileVisible = true,
                     AboutMe = "Aspiring mobile developer with skills in C#, C++, and Java, focused on Flutter. Passionate about user-friendly, efficient apps. Currently studying IT, eager to apply skills in impactful real-world projects."
                 },

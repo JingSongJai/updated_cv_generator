@@ -12,18 +12,17 @@
     Background="Transparent"
     mc:Ignorable="d">
     <Border Background="White" CornerRadius="7"
-            BorderThickness="0.5"
             BorderBrush="Gray">
         <Canvas>
             <Border
                 x:Name="imageDisplay"
-                Canvas.Left="30"
-                Canvas.Top="20"
-                Width="70"
-                Height="70"
-                CornerRadius="35" />
+                Canvas.Left="20"
+                Canvas.Top="10"
+                Width="90"
+                Height="90"
+                CornerRadius="45" />
             <StackPanel
-                Canvas.Top="100"
+                Canvas.Top="110"
                 Width="130"
                 VerticalAlignment="Center">
                 <TextBlock

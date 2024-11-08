@@ -28,7 +28,7 @@
             Width="100"
             Height="100">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Ellipse.Fill>
         </Ellipse>
         <Polygon
@@ -82,7 +82,8 @@
                 HorizontalAlignment="Left"
                 Foreground="White"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}"
+                TextAlignment="Justify"/>
 
             <!--  Language  -->
 

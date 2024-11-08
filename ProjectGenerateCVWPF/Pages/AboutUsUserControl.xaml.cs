@@ -27,10 +27,10 @@ namespace ProjectGenerateCVWPF.Pages
             panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Eav Phanith", Position = "Teacher", ImagePath = "pack://application:,,,/Images/person.jpg" }); 
             panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Nuch Chamnan", Position = "Teacher", ImagePath = "pack://application:,,,/Images/person.jpg" }); 
             
-            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Phen Makara", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
+            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Phen Makara", Position = "Member", ImagePath = "pack://application:,,,/Images/makara.jpg" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sreang Rathana", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sinh Porsou", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
-            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Taing ChingSong", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
+            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Taing ChingSong", Position = "Member", ImagePath = "pack://application:,,,/Images/song.jpg" }); 
         }
     }
 }

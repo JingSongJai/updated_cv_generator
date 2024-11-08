@@ -27,7 +27,6 @@
                 VerticalAlignment="Center"
                 Background="White"
                 BorderBrush="Gray"
-                BorderThickness="0.5"
                 CornerRadius="10" />
             <StackPanel Grid.Row="1">
                 <TextBlock

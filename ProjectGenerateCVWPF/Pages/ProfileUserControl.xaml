@@ -37,8 +37,9 @@
             <TextBlock
                 Grid.Row="2"
                 VerticalAlignment="Center"
+                FontFamily="{StaticResource Segoe UI}"
                 FontSize="27"
-                Style="{StaticResource headerText}"
+                FontWeight="Light"
                 Text="Your Profile(s)"
                 TextAlignment="Center" />
 

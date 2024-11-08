@@ -55,7 +55,7 @@
             BorderThickness="5"
             CornerRadius="60">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
 
@@ -301,7 +301,8 @@
                 HorizontalAlignment="Left"
                 Foreground="#636c75"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}"
+                TextAlignment="Justify"/>
 
             <!--  Profile  -->
 

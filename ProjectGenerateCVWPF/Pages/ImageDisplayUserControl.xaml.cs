@@ -34,7 +34,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         public string ImagePath
         {
-            set { imageDisplay.Background = new ImageBrush(new BitmapImage(new Uri(value))); }
+            set { imageDisplay.Background = new ImageBrush(new BitmapImage(new Uri(value))) { Stretch = Stretch.UniformToFill }; }
         }
 
         public ImageDisplayUserControl()

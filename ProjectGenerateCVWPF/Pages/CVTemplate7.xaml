@@ -31,7 +31,7 @@
             Width="120"
             Height="130">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
 
@@ -70,7 +70,8 @@
                 Margin="10,0,0,0"
                 Foreground="#3c406f"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}"
+                TextAlignment="Justify"/>
 
             <!--  Contact  -->
 

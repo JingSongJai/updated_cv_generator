@@ -76,7 +76,7 @@
                     Foreground="White"
                     Style="{StaticResource descText1}"
                     Text="{Binding Profile.AboutMe}"
-                    TextAlignment="Center" />
+                    TextAlignment="Justify" />
 
                 <!--  Contact  -->
 
@@ -330,10 +330,11 @@
                     Width="80"
                     Height="100"
                     Margin="0,10,0,0"
-                    Source="{Binding Profile.ImagePath}" />
+                    Source="{Binding Profile.ImagePath}"
+                    Stretch="UniformToFill"/>
             </Grid>
         </Border>
-        
+
         <Grid
             Canvas.Left="150"
             Canvas.Top="76"

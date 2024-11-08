@@ -36,6 +36,7 @@
     <None Remove="Images\language.png" />
     <None Remove="Images\location %282%29.png" />
     <None Remove="Images\location.png" />
+    <None Remove="Images\makara.jpg" />
     <None Remove="Images\mptc.png" />
     <None Remove="Images\name.png" />
     <None Remove="Images\nationality.png" />
@@ -47,6 +48,7 @@
     <None Remove="Images\reference.png" />
     <None Remove="Images\relationship.png" />
     <None Remove="Images\skills.png" />
+    <None Remove="Images\song.jpg" />
     <None Remove="Images\subject.png" />
     <None Remove="Images\telegram.png" />
     <None Remove="Images\Templates\template1.png" />
@@ -137,6 +139,9 @@
     <Resource Include="Images\location (2).png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\makara.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\mptc.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -180,6 +185,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\skills.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\song.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\subject.png">

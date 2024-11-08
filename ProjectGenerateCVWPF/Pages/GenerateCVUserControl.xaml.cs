@@ -283,6 +283,7 @@ namespace ProjectGenerateCVWPF.Pages
                 Title = "Save File",
                 FileName = "cv_generator1",
                 DefaultExt = "pdf",
+                Filter = "PDF File|*.pdf",
                 AddExtension = true
             };
 

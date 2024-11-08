@@ -22,7 +22,7 @@
             Height="120"
             CornerRadius="70">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
         <Grid
@@ -306,7 +306,8 @@
                 HorizontalAlignment="Left"
                 Foreground="{StaticResource cvText3}"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}"
+                TextAlignment="Justify"/>
 
             <!--  Profile  -->
 

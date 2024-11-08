@@ -47,7 +47,7 @@
             BorderThickness="4"
             CornerRadius="60">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" />
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
 
@@ -327,7 +327,7 @@
 
             <!--  Profile  -->
 
-            <StackPanel Grid.Row="1" Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
+            <StackPanel Grid.Row="3" Visibility="{Binding Profile.IsProfileVisible, Converter={StaticResource isVisible}}">
                 <Border
                     Padding="5,0,0,0"
                     BorderBrush="#1c3f75"
@@ -394,7 +394,7 @@
             <!--  About Me  -->
 
             <Border
-                Grid.Row="2"
+                Grid.Row="1"
                 Padding="5,0,0,0"
                 BorderBrush="#1c3f75"
                 BorderThickness="4,0,0,0">
@@ -406,13 +406,14 @@
             </Border>
 
             <TextBlock
-                Grid.Row="3"
+                Grid.Row="2"
                 Width="220"
                 Margin="10,0,0,0"
                 HorizontalAlignment="Left"
                 Foreground="#1c3f75"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}" 
+                TextAlignment="Justify"/>
 
             <!--  Experiences  -->
 

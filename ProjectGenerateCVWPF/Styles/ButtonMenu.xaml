@@ -115,6 +115,7 @@
         <Setter Property="Height" Value="20" />
         <Setter Property="Foreground" Value="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=RadioButton}}" />
         <Setter Property="Margin" Value="10,0" />
+        <Setter Property="VerticalAlignment" Value="Top" />
     </Style>
     
 

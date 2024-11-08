@@ -24,7 +24,7 @@
             Width="90"
             Height="90">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}"/>
+                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Ellipse.Fill>
         </Ellipse>
 
@@ -63,7 +63,8 @@
                 HorizontalAlignment="Left"
                 Foreground="#37383d"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" />
+                Text="{Binding Profile.AboutMe}" 
+                TextAlignment="Justify"/>
 
             <!--  Contact  -->
 

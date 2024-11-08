@@ -28,7 +28,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="User" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -91,7 +91,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="CardAccountDetails" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -154,7 +154,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Flag" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -217,7 +217,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Location" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -280,7 +280,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Phone" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -343,7 +343,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Email" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -406,8 +406,9 @@
                             <materialDesign:PackIcon
                                 Width="20"
                                 Height="20"
-                                VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Margin="0,3,0,0"
+                                VerticalAlignment="Top"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Information" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -472,7 +473,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Settings" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -535,7 +536,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Language" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -598,7 +599,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Goal" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -661,7 +662,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="School" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -724,7 +725,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="DateRange" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -787,7 +788,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Work" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -850,7 +851,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Draft" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"
@@ -913,7 +914,7 @@
                                 Width="20"
                                 Height="20"
                                 VerticalAlignment="Center"
-                                Foreground="{StaticResource btnColor2}"
+                                Foreground="{StaticResource btnColor1}"
                                 Kind="Company" />
                             <ScrollViewer
                                 x:Name="PART_ContentHost"

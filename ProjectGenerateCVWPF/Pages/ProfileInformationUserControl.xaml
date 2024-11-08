@@ -67,14 +67,14 @@
                     Foreground="{StaticResource btnColor1}"
                     Text="Profile" />
                 <CheckBox
-                    Content="Visible"
                     Grid.Column="1"
-                    IsChecked="{Binding Profile.IsProfileVisible}"
-                    Style="{StaticResource MaterialDesignCheckBox}"
+                    HorizontalAlignment="Right"
+                    Content="Visible"
                     FontFamily="{StaticResource Segoe UI}"
                     FontSize="13"
                     FontWeight="Light"
-                    HorizontalAlignment="Right"/>
+                    IsChecked="{Binding Profile.IsProfileVisible}"
+                    Style="{StaticResource MaterialDesignCheckBox}" />
                 <StackPanel
                     Grid.Row="1"
                     Grid.ColumnSpan="2"
@@ -175,10 +175,27 @@
                         FontSize="14"
                         IsTodayHighlighted="True"
                         SelectedDate="{Binding Profile.DateofBirth, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/MM/yyyy}"
-                        SelectedDateFormat="Long"
+                        SelectedDateFormat="Short"
                         Style="{StaticResource MaterialDesignOutlinedDatePicker}" />
                 </StackPanel>
-                <StackPanel Grid.Row="5" Grid.ColumnSpan="2">
+                <StackPanel Grid.Row="5">
+                    <TextBlock
+                        Margin="5,0"
+                        FontSize="15"
+                        FontWeight="Light"
+                        Text="Marital State" />
+                    <ComboBox
+                        x:Name="comboStatus"
+                        Margin="7,4"
+                        Padding="10,9"
+                        FontSize="14"
+                        ItemsSource="{Binding Profile.CustomMaritalState}"
+                        SelectedIndex="0"
+                        SelectedItem="{Binding Profile.MaritalState, UpdateSourceTrigger=PropertyChanged}"
+                        SelectionChanged="comboboxGender_SelectionChanged"
+                        Style="{StaticResource MaterialDesignOutlinedComboBox}" />
+                </StackPanel>
+                <StackPanel Grid.Row="5" Grid.Column="1">
                     <TextBlock
                         Margin="5,0"
                         FontSize="15"
