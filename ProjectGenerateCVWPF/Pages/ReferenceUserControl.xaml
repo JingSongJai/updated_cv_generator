@@ -30,7 +30,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="borderBackground" Property="Background" Value="{StaticResource btnColor1}" />
+                                <Setter TargetName="borderBackground" Property="Background" Value="#0192ff" />
                                 <Setter Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -57,6 +57,12 @@
                                 VerticalAlignment="Center"
                                 ContentSource="Content" />
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="#cc414f" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -163,13 +169,12 @@
                             <Button
                                 x:Name="btnCancel"
                                 Grid.Column="1"
-                                Width="70"
                                 HorizontalAlignment="Center"
                                 Background="{StaticResource btnColor4}"
                                 Click="btnCancel_Click"
                                 Content="Cancel"
                                 Foreground="{StaticResource cvText}"
-                                Style="{StaticResource btnAdd}" />
+                                Style="{StaticResource btnRemove}" />
                             <Button
                                 Grid.Column="1"
                                 Width="70"
@@ -194,8 +199,8 @@
                         Margin="5,0,5,0"
                         VerticalAlignment="Center"
                         FontFamily="{StaticResource Segoe UI}"
-                        FontWeight="Light"
                         FontSize="15"
+                        FontWeight="Light"
                         Text="Your References" />
                     <Button
                         Grid.Column="2"

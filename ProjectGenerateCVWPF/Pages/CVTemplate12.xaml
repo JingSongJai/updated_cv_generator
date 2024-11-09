@@ -203,7 +203,8 @@
                 Grid.Row="6"
                 Height="23"
                 Margin="0,3,0,3"
-                Background="Black">
+                Background="Black"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"

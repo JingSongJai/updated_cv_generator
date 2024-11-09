@@ -17,10 +17,7 @@ namespace ProjectGenerateCVWPF.Data
             get { return level; }
             set
             {
-                if (value == "Very Good") level = "▣▣▣▣";
-                else if (value == "Good") level = "▣▣▣▢";
-                else if (value == "Medium") level = "▣▣▢▢";
-                else if (value == "Weak") level = "▣▢▢▢";
+                level = value; 
             }
         }
 

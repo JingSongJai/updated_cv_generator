@@ -326,12 +326,14 @@
                     </ListView.ItemTemplate>
                 </ListView>
 
-                <Image
-                    Width="80"
+                <Border
+                    Width="90"
                     Height="100"
-                    Margin="0,10,0,0"
-                    Source="{Binding Profile.ImagePath}"
-                    Stretch="UniformToFill"/>
+                    Margin="0,10,0,0">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top" />
+                    </Border.Background>
+                </Border>
             </Grid>
         </Border>
 

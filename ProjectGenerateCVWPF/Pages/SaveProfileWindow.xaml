@@ -14,7 +14,8 @@
     MaxHeight="200"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Window_Loaded">
     <Window.Resources>
         <Style x:Key="btnSave" TargetType="Button">
             <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />

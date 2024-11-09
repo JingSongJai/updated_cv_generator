@@ -60,16 +60,19 @@
                         Width="50"
                         Margin="20,0"
                         VerticalAlignment="Top"
-                        Source="/Images/mptc.png" />
+                        Source="/Images/mptc.png"
+                        MouseDown="Image_MouseDown"/>
                     <Image
                         Width="130"
                         Margin="20,0"
                         VerticalAlignment="Top"
-                        Source="/Images/cbrd.png" />
+                        Source="/Images/cbrd.png" 
+                        MouseDown="Image_MouseDown_1"/>
                     <Image
                         Height="50"
                         Margin="20,5,0,0"
-                        Source="/Images/ant.jpg" />
+                        Source="/Images/ant.jpg" 
+                        MouseDown="Image_MouseDown_2"/>
                 </StackPanel>
             </StackPanel>
             <Border

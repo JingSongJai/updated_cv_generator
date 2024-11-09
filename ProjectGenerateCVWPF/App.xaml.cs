@@ -69,13 +69,13 @@ namespace ProjectGenerateCVWPF
 
             sampleViewModel.Languages.Add(new Data.Languages()
             {
-                Name = "French",
+                Name = "English",
                 Level = "Good"
             });
             sampleViewModel.Languages.Add(new Data.Languages()
             {
                 Name = "Khmer",
-                Level = "Very Good"
+                Level = "Fluent"
             });
 
             sampleViewModel.Hobbies.Add(new Data.Hobbies()

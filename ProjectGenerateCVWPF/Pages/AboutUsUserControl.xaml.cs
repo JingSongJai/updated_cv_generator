@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +33,33 @@ namespace ProjectGenerateCVWPF.Pages
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sreang Rathana", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sinh Porsou", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Taing ChingSong", Position = "Member", ImagePath = "pack://application:,,,/Images/song.jpg" }); 
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://mptc.gov.kh/en/",
+                UseShellExecute = true
+            });
+        }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://mptc.gov.kh/en/",
+                UseShellExecute = true
+            });
+        }
+
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://web.facebook.com/ant.com.kh",
+                UseShellExecute = true
+            });
         }
     }
 }

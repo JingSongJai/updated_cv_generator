@@ -10,6 +10,8 @@
     Height="150"
     Margin="5"
     Background="Transparent"
+    Cursor="Hand"
+    MouseDown="UserControl_MouseDown"
     mc:Ignorable="d">
     <Border Background="White" CornerRadius="7"
             BorderBrush="Gray">

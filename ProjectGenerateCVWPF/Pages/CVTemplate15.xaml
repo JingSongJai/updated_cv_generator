@@ -33,7 +33,10 @@
             Stroke="White"
             StrokeThickness="4">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush
+                    AlignmentY="Top"
+                    ImageSource="{Binding Profile.ImagePath}"
+                    Stretch="UniformToFill" />
             </Ellipse.Fill>
         </Ellipse>
         <Border
@@ -265,7 +268,8 @@
             <StackPanel
                 Grid.Row="5"
                 Margin="0,2"
-                Orientation="Horizontal">
+                Orientation="Horizontal"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <materialDesign:PackIcon
                     Height="20"
                     Margin="3,0"

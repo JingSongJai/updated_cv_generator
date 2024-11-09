@@ -17,7 +17,7 @@ namespace ProjectGenerateCVWPF.Data
         public string? Nationality { get; set; }
         public string? Gender { get; set; }
         public ObservableCollection<string> CustomGender { get; set; }
-        public ObservableCollection<string> CustomMaritalState { get; set; } = new ObservableCollection<string>() { "Single", "Married" };
+        public ObservableCollection<string> CustomMaritalState { get; set; } = new ObservableCollection<string>() { "Single", "Married", "Divorced" };
         public DateTime? DateofBirth
         {
             get

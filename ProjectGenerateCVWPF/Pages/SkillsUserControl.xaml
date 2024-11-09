@@ -30,7 +30,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="borderBackground" Property="Background" Value="{StaticResource btnColor1}" />
+                                <Setter TargetName="borderBackground" Property="Background" Value="#0192ff" />
                                 <Setter Property="Cursor" Value="Hand" />
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -57,6 +57,12 @@
                                 VerticalAlignment="Center"
                                 ContentSource="Content" />
                         </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="borderBackground" Property="Background" Value="#cc414f" />
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -118,13 +124,12 @@
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                         <Button
                             Grid.Column="1"
-                            Width="70"
                             HorizontalAlignment="Center"
                             Background="{StaticResource btnColor4}"
                             Click="Button_Click_4"
                             Content="Cancel"
                             Foreground="{StaticResource cvText}"
-                            Style="{StaticResource btnAdd}" />
+                            Style="{StaticResource btnRemove}" />
                         <Button
                             Grid.Column="1"
                             Width="70"

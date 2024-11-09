@@ -199,7 +199,8 @@
                 Height="23"
                 Margin="0,3,0,3"
                 HorizontalAlignment="Left"
-                Background="#3d4454">
+                Background="#3d4454"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon
                         Width="13"

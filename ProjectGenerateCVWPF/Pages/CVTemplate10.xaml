@@ -479,7 +479,8 @@
             <StackPanel
                 Grid.Row="5"
                 Margin="0,2"
-                VerticalAlignment="Bottom">
+                VerticalAlignment="Bottom"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <TextBlock
                     FontSize="12"
                     FontWeight="SemiBold"

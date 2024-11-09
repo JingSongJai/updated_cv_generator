@@ -47,7 +47,10 @@
             BorderThickness="4"
             CornerRadius="60">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush
+                    AlignmentY="Top"
+                    ImageSource="{Binding Profile.ImagePath}"
+                    Stretch="UniformToFill" />
             </Border.Background>
         </Border>
 
@@ -222,7 +225,8 @@
                 Grid.Row="6"
                 Height="23"
                 Margin="0,3,0,3"
-                Background="#5290c9">
+                Background="#5290c9"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
@@ -412,8 +416,8 @@
                 HorizontalAlignment="Left"
                 Foreground="#1c3f75"
                 Style="{StaticResource descText1}"
-                Text="{Binding Profile.AboutMe}" 
-                TextAlignment="Justify"/>
+                Text="{Binding Profile.AboutMe}"
+                TextAlignment="Justify" />
 
             <!--  Experiences  -->
 

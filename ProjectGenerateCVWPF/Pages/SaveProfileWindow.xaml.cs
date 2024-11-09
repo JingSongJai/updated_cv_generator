@@ -63,5 +63,10 @@ namespace ProjectGenerateCVWPF.Pages
 
             this.Close(); 
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Keyboard.Focus(tbProfileName); 
+        }
     }
 }

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Org.BouncyCastle.Bcpg;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,14 +35,25 @@ namespace ProjectGenerateCVWPF.Pages
             set { txtPosition.Text = value; }
         }
 
+        public string Url { set; get; }
+
         public string ImagePath
         {
-            set { imageDisplay.Background = new ImageBrush(new BitmapImage(new Uri(value))) { Stretch = Stretch.UniformToFill }; }
+            set { imageDisplay.Background = new ImageBrush(new BitmapImage(new Uri(value))) { Stretch = Stretch.UniformToFill, AlignmentY = AlignmentY.Top }; }
         }
 
         public ImageDisplayUserControl()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = Url,
+                UseShellExecute = true
+            });
         }
     }
 }

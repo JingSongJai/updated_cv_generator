@@ -282,6 +282,7 @@
                                 <ComboBoxItem Content="Template12" />
                                 <ComboBoxItem Content="Template13" />
                                 <ComboBoxItem Content="Template14" />
+                                <ComboBoxItem Content="Template15" />
                             </ComboBox>
                             <TextBlock
                                 Padding="10"

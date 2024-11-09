@@ -119,6 +119,34 @@ namespace ProjectGenerateCVWPF.Pages
             return renderBitmap;
         }
 
+        public static async Task<BitmapSource> RenderControlToBitmapAsync(FrameworkElement control, double dpiX = 300, double dpiY = 300)
+        {
+            if (control == null) return null;
+
+            // Render the control on the UI thread
+            BitmapSource renderBitmap = await Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                Size size = new Size(control.ActualWidth, control.ActualHeight);
+                control.Measure(size);
+                control.Arrange(new Rect(size));
+
+                RenderTargetBitmap bitmap = new RenderTargetBitmap(
+                    (int)(control.ActualWidth * dpiX / 96),
+                    (int)(control.ActualHeight * dpiY / 96),
+                    dpiX,
+                    dpiY,
+                    PixelFormats.Pbgra32);
+
+                bitmap.Render(control);
+                return bitmap;
+            });
+
+            // Now, the bitmap is rendered and can be processed in a background thread
+            return renderBitmap;
+        }
+
+
+
         private void profile_Click(object sender, RoutedEventArgs e)
         {
             string name = ((RadioButton)sender).Name;
@@ -291,7 +319,7 @@ namespace ProjectGenerateCVWPF.Pages
             {
                 string path = saveFileDialog.FileName;
                 loading.Visibility = Visibility.Visible;
-                await SaveAsPdf(RenderControlToBitmap((Control)panelCVDisplay.Children[0]), path);
+                await SaveAsPdf(await RenderControlToBitmapAsync((Control)panelCVDisplay.Children[0]), path);
             }
             loading.Visibility = Visibility.Collapsed;
         }
@@ -443,6 +471,11 @@ namespace ProjectGenerateCVWPF.Pages
             string jsonString = File.ReadAllText("Profiles/" + selectedName + ".json");
 
             vm = JsonSerializer.Deserialize<ViewModel>(jsonString);
+
+            if ((panelCVDisplay.Children[0] as Control) is IDisposable disableContext)
+            {
+                disableContext.Dispose(); 
+            }
 
             (panelCVDisplay.Children[0] as Control).DataContext = vm;
             setDataContexttoPages();
