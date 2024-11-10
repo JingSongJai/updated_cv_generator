@@ -18,7 +18,7 @@ namespace ProjectGenerateCVWPF
         public static TemplateMenuUserControl templateMenu = new TemplateMenuUserControl();
         public static int maxSkill = 0;
         internal static Data.ViewModel sampleViewModel;
-
+        public static bool isAddNewImage = false; 
         protected override async void OnStartup(StartupEventArgs e)
         {
             main = new MainWindow();
@@ -39,7 +39,7 @@ namespace ProjectGenerateCVWPF
                     //},
                     PlaceofBirth = "Prey Veng Commune, Prey Veng District, Prey Veng Province",
                     MaritalState = "Married",
-                    ImagePath = "pack://application:,,,/Images/makara.jpg",
+                    ImageSource = new Helper() { imagePath = "pack://application:,,,/Images/person.jpg" }.CopyImage(),
                     IsProfileVisible = true,
                     AboutMe = "Aspiring mobile developer with skills in C#, C++, and Java, focused on Flutter. Passionate about user-friendly, efficient apps. Currently studying IT, eager to apply skills in impactful real-world projects."
                 },

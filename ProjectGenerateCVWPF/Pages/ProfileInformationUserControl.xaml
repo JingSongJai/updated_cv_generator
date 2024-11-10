@@ -120,10 +120,9 @@
                         Height="100"
                         BorderBrush="Gray"
                         BorderThickness="0.5">
-                        <Image
-                            Width="100"
-                            Height="100"
-                            Source="{Binding Profile.ImagePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <Border.Background>
+                            <ImageBrush ImageSource="{Binding Profile.ImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill" AlignmentY="Top"/>
+                        </Border.Background>
                     </Border>
                     <StackPanel Orientation="Horizontal">
                         <Button

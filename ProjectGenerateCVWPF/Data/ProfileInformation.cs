@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace ProjectGenerateCVWPF.Data
 {
-    public class ProfileInformation
+    public class ProfileInformation : INotifyPropertyChanged
     {
         private string? dateofbirth;
+        private string? imagePath;
+        private ImageSource? imageSource; 
 
         public string? Name { get; set; }
         public string? Position { get; set; }
@@ -34,8 +40,58 @@ namespace ProjectGenerateCVWPF.Data
         public string? Phone { get; set; }
         public string? Email { get; set; }
         public string? CurrentPlace { get; set; }
-        public string? ImagePath { get; set; }
+
+        [JsonIgnore]
+        public ImageSource? ImageSource
+        {
+            get { return imageSource; }
+            set
+            {
+                if (imageSource != value)
+                {
+                    imageSource = value;
+                    OnPropertyChanged(nameof(ImageSource)); // Notify change for ImageSource
+                }
+            }
+        }
+        public string? ImagePath
+        {
+            get { return imagePath; }
+            set
+            {
+                if (imagePath != value)
+                {
+                    imagePath = value;
+                    OnPropertyChanged(nameof(ImagePath)); // Notify change for ImagePath
+                    UpdateImageSource(); // Update ImageSource when ImagePath changes
+                }
+            }
+        }
         public bool? IsProfileVisible { get; set; } = false;
         public bool? IsReferenceVisible { get; set; } = true;
+
+        private void UpdateImageSource()
+        {
+            if (!string.IsNullOrEmpty(ImagePath))
+            {
+                ImageSource = new Helper() { imagePath = ImagePath }.CopyImage(); // Update ImageSource
+            }
+            else
+            {
+                ImageSource = new Helper() { imagePath = "pack://application:,,,/Images/person.jpg" }.CopyImage(); // Fallback if ImagePath is empty
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public ProfileInformation()
+        {
+            UpdateImageSource(); 
+        }
     }
 }

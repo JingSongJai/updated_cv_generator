@@ -186,8 +186,9 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            App.isAddNewImage = false; 
             App.main.panelDisplay.Children.Clear();
-            App.main.panelDisplay.Children.Add(App.templateMenu); 
+            App.main.panelDisplay.Children.Add(new TemplateMenuUserControl()); 
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -427,9 +428,11 @@ namespace ProjectGenerateCVWPF.Pages
             //}
             //else File.Copy(vm.Profile.ImagePath, "Images/" + curId + Path.GetExtension(vm.Profile.ImagePath));
 
-            new SaveProfileWindow() { vm = vm, ImagePath = vm.Profile.ImagePath }.ShowDialog();
+            if (new SaveProfileWindow() { vm = vm, ImagePath = vm.Profile.ImagePath }.ShowDialog() == true)
+            {
+                getProfiles();
+            }
 
-            getProfiles(); 
         }
 
         private int AutoID(string path)
@@ -464,18 +467,15 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void cbProfile_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbProfile.SelectedIndex == -1) return; 
+            if (cbProfile.SelectedIndex == -1) return;
+
+            App.isAddNewImage = false; 
 
             string selectedName = cbProfile.SelectedItem.ToString();
 
             string jsonString = File.ReadAllText("Profiles/" + selectedName + ".json");
 
             vm = JsonSerializer.Deserialize<ViewModel>(jsonString);
-
-            if ((panelCVDisplay.Children[0] as Control) is IDisposable disableContext)
-            {
-                disableContext.Dispose(); 
-            }
 
             (panelCVDisplay.Children[0] as Control).DataContext = vm;
             setDataContexttoPages();

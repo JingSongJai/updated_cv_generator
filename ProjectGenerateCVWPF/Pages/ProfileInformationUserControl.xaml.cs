@@ -42,12 +42,14 @@ namespace ProjectGenerateCVWPF.Pages
             if (ofd.ShowDialog() == true)
             {
                 btnAddImage.Tag = ofd.FileName;
+                App.isAddNewImage = true; 
             }
         }
 
         private void btnRemoveImage_Click(object sender, RoutedEventArgs e)
         {
             btnAddImage.Tag = "pack://application:,,,/Images/person.jpg";
+            App.isAddNewImage = true; 
         }
 
         private void comboboxGender_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -24,7 +24,7 @@ namespace ProjectGenerateCVWPF.Pages
     /// </summary>
     public partial class CVTemplate1 : UserControl
     {
-        public int maxSkill = 4; 
+        public int maxSkill = 4;
 
         public CVTemplate1()
         {

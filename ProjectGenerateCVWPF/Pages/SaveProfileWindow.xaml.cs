@@ -34,6 +34,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            this.DialogResult = false; 
             this.Close(); 
         }
 
@@ -43,30 +44,60 @@ namespace ProjectGenerateCVWPF.Pages
 
             if (vm.Profile.ImagePath == "pack://application:,,,/Images/person.jpg" && Application.GetResourceStream(new Uri(vm.Profile.ImagePath)) != null)
             {
-                using (FileStream fileStream = new FileStream("Images/" + tbProfileName.Text + ".jpg", FileMode.Create, FileAccess.Write))
+                //using (FileStream fileStream = new FileStream("Images/" + tbProfileName.Text + ".jpg", FileMode.Create, FileAccess.Write))
+                //{
+                //    Application.GetResourceStream(new Uri(vm.Profile.ImagePath)).Stream.CopyTo(fileStream);
+                //}
+                var resourceStreamInfo = Application.GetResourceStream(new Uri(vm.Profile.ImagePath));
+
+                if (resourceStreamInfo != null)
                 {
-                    Application.GetResourceStream(new Uri(vm.Profile.ImagePath)).Stream.CopyTo(fileStream);
+                    using (resourceStreamInfo.Stream) // Dispose of the resource stream after use
+                    using (FileStream fileStream = new FileStream("Images/" + tbProfileName.Text + ".jpg", FileMode.Create, FileAccess.Write))
+                    {
+                        resourceStreamInfo.Stream.CopyTo(fileStream);
+                    }
                 }
             }
             else
             {
-                if (File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)))
+                if (File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)) && App.isAddNewImage)
                 {
                     File.Delete("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
+                    File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
                 }
-                File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
+                else if (!File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)) && (App.isAddNewImage || !App.isAddNewImage)) File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
             }
 
+            //vm.Profile.ImageSource = ImageSourceToBase64(vm.Profile.ImageSource); 
             vm.Profile.ImagePath = AppDomain.CurrentDomain.BaseDirectory + "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath);
             string jsonString = JsonSerializer.Serialize(vm, new JsonSerializerOptions() { WriteIndented = true });
             File.WriteAllText($"Profiles/{tbProfileName.Text}.json", jsonString);
 
-            this.Close(); 
+            App.isAddNewImage = false;
+            this.DialogResult = true;
+            this.Close();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Keyboard.Focus(tbProfileName); 
+        }
+
+        public string ImageSourceToBase64(ImageSource imageSource)
+        {
+            if (imageSource is BitmapImage bitmapImage)
+            {
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    BitmapEncoder encoder = new PngBitmapEncoder();
+                    encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
+                    encoder.Save(memoryStream);
+                    byte[] imageBytes = memoryStream.ToArray();
+                    return Convert.ToBase64String(imageBytes);
+                }
+            }
+            return null;
         }
     }
 }

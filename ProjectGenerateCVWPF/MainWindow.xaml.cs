@@ -23,7 +23,7 @@ namespace ProjectGenerateCVWPF
         public MainWindow()
         {
             InitializeComponent();
-            panelDisplay.Children.Add(App.templateMenu); 
+            panelDisplay.Children.Add(new TemplateMenuUserControl()); 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -64,7 +64,7 @@ namespace ProjectGenerateCVWPF
             {
                 case "templateMenu":
                     panelDisplay.Children.Clear();
-                    panelDisplay.Children.Add(App.templateMenu);
+                    panelDisplay.Children.Add(new TemplateMenuUserControl());
                     break; 
                 case "profileMenu":
                     panelDisplay.Children.Clear();
