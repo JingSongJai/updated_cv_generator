@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="SampleWindow"
     Width="500"
@@ -13,10 +14,12 @@
     MaxWidth="500"
     MaxHeight="750"
     Background="White"
+    Icon="/Images/cv_icon.ico"
     MouseDown="Window_MouseDown"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="Window_Loaded">
     <Window.Resources>
         <Style x:Key="forButton" TargetType="Button">
             <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
@@ -28,7 +31,6 @@
                             x:Name="borderBackground"
                             Width="130"
                             Margin="10,15"
-                            Padding="15,5"
                             Background="{TemplateBinding Background}"
                             CornerRadius="3">
                             <ContentPresenter
@@ -46,8 +48,34 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="btnSwitch" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="borderBackground"
+                            Margin="5"
+                            Padding="15,5"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="3">
+                            <ContentPresenter
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                ContentSource="Content" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Margin="0,-4,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition />
@@ -57,19 +85,36 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50" />
                 <ColumnDefinition />
+                <ColumnDefinition Width="0.5" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="0.5"/>
+                <ColumnDefinition />
                 <ColumnDefinition Width="50" />
             </Grid.ColumnDefinitions>
+            <Button
+                Grid.Column="1"
+                Background="White"
+                Content="Previous"
+                FontSize="13"
+                FontWeight="Light"
+                Style="{StaticResource btnSwitch}" Click="Button_Click_3" />
             <TextBlock
                 x:Name="txtTemplateName"
-                Grid.Row="2"
-                Grid.Column="1"
+                Grid.Column="3"
                 VerticalAlignment="Center"
                 FontSize="23"
+                Text="Template15"
                 Style="{StaticResource headerText2}"
-                Text="Text goes here!"
                 TextAlignment="Center" />
             <Button
-                Grid.Column="2"
+                Grid.Column="5"
+                Background="White"
+                Content="Next"
+                FontSize="13"
+                FontWeight="Light"
+                Style="{StaticResource btnSwitch}" Click="Button_Click_2" />
+            <Button
+                Grid.Column="8"
                 Click="Button_Click"
                 Content="✕"
                 FontSize="20"

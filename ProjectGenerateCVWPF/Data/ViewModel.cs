@@ -40,6 +40,7 @@ namespace ProjectGenerateCVWPF.Data
                 },
                 //PlaceofBirth = "Preah Prasob Commune, Preah Prasob Villige, Khsach Kandal District, Kandal Province",
                 //MaritalState = "Single",
+                ImagePath = "pack://application:,,,/Images/person.jpg",
                 //ImageSource = new Helper() { imagePath = "pack://application:,,,/Images/person.jpg" }.CopyImage()
             }; 
             Educations = new ObservableCollection<Educations>();

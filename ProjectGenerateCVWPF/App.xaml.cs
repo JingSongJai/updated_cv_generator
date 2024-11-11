@@ -39,7 +39,7 @@ namespace ProjectGenerateCVWPF
                     //},
                     PlaceofBirth = "Prey Veng Commune, Prey Veng District, Prey Veng Province",
                     MaritalState = "Married",
-                    ImageSource = new Helper() { imagePath = "pack://application:,,,/Images/person.jpg" }.CopyImage(),
+                    ImageSource = new Helper() { imagePath = "pack://application:,,,/Images/makara.jpg" }.CopyImage(),
                     IsProfileVisible = true,
                     AboutMe = "Aspiring mobile developer with skills in C#, C++, and Java, focused on Flutter. Passionate about user-friendly, efficient apps. Currently studying IT, eager to apply skills in impactful real-world projects."
                 },

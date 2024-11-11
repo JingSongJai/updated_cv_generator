@@ -61,7 +61,7 @@
             BorderThickness="3"
             CornerRadius="60">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush ImageSource="{Binding Profile.ImageSource}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
         <Grid Canvas.Top="140" Width="150">

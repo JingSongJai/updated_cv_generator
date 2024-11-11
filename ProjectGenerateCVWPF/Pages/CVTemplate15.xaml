@@ -35,7 +35,7 @@
             <Ellipse.Fill>
                 <ImageBrush
                     AlignmentY="Top"
-                    ImageSource="{Binding Profile.ImagePath}"
+                    ImageSource="{Binding Profile.ImageSource}"
                     Stretch="UniformToFill" />
             </Ellipse.Fill>
         </Ellipse>
@@ -301,11 +301,11 @@
                 </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-5,-7,0,0">
+                        <StackPanel Margin="-3,-7,0,0">
                             <TextBlock
                                 Width="100"
                                 FontWeight="SemiBold"
-                                Foreground="#646464"
+                                Foreground="#333333"
                                 Style="{DynamicResource headerText2}"
                                 Text="{Binding Name}" />
                             <TextBlock
@@ -313,13 +313,13 @@
                                 Margin="0,0,0,3"
                                 FontStyle="Italic"
                                 FontWeight="SemiBold"
-                                Foreground="#646464"
+                                Foreground="#333333"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Company}" />
                             <TextBlock
                                 Width="100"
                                 Margin="0,0,0,2"
-                                Foreground="#646464"
+                                Foreground="#333333"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Email}" />
                             <TextBlock

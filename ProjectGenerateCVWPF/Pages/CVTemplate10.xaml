@@ -72,7 +72,7 @@
             BorderThickness="2"
             CornerRadius="15">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush ImageSource="{Binding Profile.ImageSource}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Border.Background>
         </Border>
 

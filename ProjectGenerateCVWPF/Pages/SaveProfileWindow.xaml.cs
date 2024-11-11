@@ -41,7 +41,13 @@ namespace ProjectGenerateCVWPF.Pages
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(tbProfileName.Text)) return;
-
+            if (File.Exists("Profiles/" + tbProfileName.Text + ".json"))
+            {
+                //    MessageBox.Show("Profile is already exists!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                //    return; 
+                txtMessage.Text = "Profile is already existed!";
+                return;
+            }
             if (vm.Profile.ImagePath == "pack://application:,,,/Images/person.jpg" && Application.GetResourceStream(new Uri(vm.Profile.ImagePath)) != null)
             {
                 //using (FileStream fileStream = new FileStream("Images/" + tbProfileName.Text + ".jpg", FileMode.Create, FileAccess.Write))
@@ -61,15 +67,18 @@ namespace ProjectGenerateCVWPF.Pages
             }
             else
             {
-                if (File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)) && App.isAddNewImage)
-                {
-                    File.Delete("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
-                    File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
-                }
-                else if (!File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)) && (App.isAddNewImage || !App.isAddNewImage)) File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
+                //if (File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)) && App.isAddNewImage)
+                //{
+                //    File.Delete("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
+                //    File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
+                //}
+                //else if (!File.Exists("Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath)) && (App.isAddNewImage || !App.isAddNewImage))
+                //{
+                //    File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
+                //}
+                File.Copy(vm.Profile.ImagePath, "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath));
             }
 
-            //vm.Profile.ImageSource = ImageSourceToBase64(vm.Profile.ImageSource); 
             vm.Profile.ImagePath = AppDomain.CurrentDomain.BaseDirectory + "Images/" + tbProfileName.Text + System.IO.Path.GetExtension(vm.Profile.ImagePath);
             string jsonString = JsonSerializer.Serialize(vm, new JsonSerializerOptions() { WriteIndented = true });
             File.WriteAllText($"Profiles/{tbProfileName.Text}.json", jsonString);

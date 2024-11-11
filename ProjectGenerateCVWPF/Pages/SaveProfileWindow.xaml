@@ -12,10 +12,10 @@
     MinHeight="200"
     MaxWidth="300"
     MaxHeight="200"
+    Loaded="Window_Loaded"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    mc:Ignorable="d"
-    Loaded="Window_Loaded">
+    mc:Ignorable="d">
     <Window.Resources>
         <Style x:Key="btnSave" TargetType="Button">
             <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
@@ -102,13 +102,20 @@
                 Content="✕"
                 Style="{StaticResource operatorButton}" />
         </Grid>
-        <TextBox
-            x:Name="tbProfileName"
-            Grid.Row="1"
-            Height="40"
-            Margin="20,0"
-            Style="{StaticResource tbReference}"
-            Tag="Profile Name" />
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center">
+            <TextBox
+                x:Name="tbProfileName"
+                Height="40"
+                Margin="20,0"
+                Style="{StaticResource tbReference}"
+                Tag="Profile Name" />
+            <TextBlock x:Name="txtMessage"
+                       Style="{StaticResource descText1}"
+                       Foreground="{StaticResource btnColor4}"
+                       Margin="30 5"
+                       FontSize="11"/>
+        </StackPanel>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />

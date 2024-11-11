@@ -476,7 +476,6 @@ namespace ProjectGenerateCVWPF.Pages
             string jsonString = File.ReadAllText("Profiles/" + selectedName + ".json");
 
             vm = JsonSerializer.Deserialize<ViewModel>(jsonString);
-
             (panelCVDisplay.Children[0] as Control).DataContext = vm;
             setDataContexttoPages();
             profile.IsChecked = true; 

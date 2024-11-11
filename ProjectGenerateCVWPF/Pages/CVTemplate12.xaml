@@ -25,7 +25,7 @@
             Width="100"
             Height="100">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush ImageSource="{Binding Profile.ImageSource}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Ellipse.Fill>
         </Ellipse>
         <Grid

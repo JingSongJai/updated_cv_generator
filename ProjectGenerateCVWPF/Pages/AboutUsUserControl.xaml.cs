@@ -26,11 +26,11 @@ namespace ProjectGenerateCVWPF.Pages
         {
             InitializeComponent();
             panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Teang Chandalen", Position = "Teacher", ImagePath = "pack://application:,,,/Images/dalen.jpg" }); 
-            panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Eav Phanith", Position = "Teacher", ImagePath = "pack://application:,,,/Images/person.jpg" }); 
-            panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Nuch Chamnan", Position = "Teacher", ImagePath = "pack://application:,,,/Images/person.jpg" }); 
+            panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Eav Phanith", Position = "Mentor", ImagePath = "pack://application:,,,/Images/person.jpg" }); 
+            panelDisplay.Children.Add(new ImageDisplayUserControl() { Title = "Nuch Chamnan", Position = "Mentor", ImagePath = "pack://application:,,,/Images/person.jpg" }); 
             
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Phen Makara", Position = "Member", ImagePath = "pack://application:,,,/Images/makara.jpg" }); 
-            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sreang Rathana", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
+            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sreang Rathana", Position = "Member", ImagePath = "pack://application:,,,/Images/rathana.jpg" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sinh Porsou", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Taing ChingSong", Position = "Member", ImagePath = "pack://application:,,,/Images/song.jpg" }); 
         }

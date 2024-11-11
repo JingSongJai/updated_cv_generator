@@ -43,10 +43,11 @@
                 Text="Your Profile(s)"
                 TextAlignment="Center" />
 
-            <StackPanel
-                x:Name="panelDisplay"
-                Grid.Row="3"
-                Width="617" />
+            <ScrollViewer Grid.Row="3"
+                          HorizontalScrollBarVisibility="Hidden"
+                          VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="panelDisplay" Width="617" />
+            </ScrollViewer>
         </Grid>
     </Border>
 </UserControl>

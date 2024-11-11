@@ -24,7 +24,7 @@
             Width="90"
             Height="90">
             <Ellipse.Fill>
-                <ImageBrush ImageSource="{Binding Profile.ImagePath}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush ImageSource="{Binding Profile.ImageSource}" Stretch="UniformToFill" AlignmentY="Top"/>
             </Ellipse.Fill>
         </Ellipse>
 

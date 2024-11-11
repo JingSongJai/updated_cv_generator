@@ -3,25 +3,70 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace ProjectGenerateCVWPF.Data
 {
-    public class ProfileInformation : INotifyPropertyChanged
+    public class ProfileInformation : PropertyChangeClass
     {
+        private string? name, position, aboutme, nationality, gender, placeofbirth, maritalstate, phone, email, currentplace;
+        private bool? isprofilevisible = false, isreferencevisible = true; 
         private string? dateofbirth;
         private string? imagePath;
         private ImageSource? imageSource; 
 
-        public string? Name { get; set; }
-        public string? Position { get; set; }
-        public string? AboutMe { get; set; }
-        public string? Nationality { get; set; }
-        public string? Gender { get; set; }
+        public string? Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? Position
+        {
+            get => position;
+            set
+            {
+                position = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? AboutMe
+        {
+            get => aboutme;
+            set
+            {
+                aboutme = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? Nationality
+        {
+            get => nationality;
+            set
+            {
+                nationality = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? Gender
+        {
+            get => gender;
+            set
+            {
+                gender = value;
+                OnPropertyChanged();
+            }
+        }
         public ObservableCollection<string> CustomGender { get; set; }
         public ObservableCollection<string> CustomMaritalState { get; set; } = new ObservableCollection<string>() { "Single", "Married", "Divorced" };
         public DateTime? DateofBirth
@@ -33,13 +78,54 @@ namespace ProjectGenerateCVWPF.Data
             set
             {
                 if(value != null) dateofbirth = value.Value.ToShortDateString();
+                OnPropertyChanged();
             }
         }
-        public string? PlaceofBirth { get; set; }
-        public string? MaritalState { get; set; }
-        public string? Phone { get; set; }
-        public string? Email { get; set; }
-        public string? CurrentPlace { get; set; }
+        public string? PlaceofBirth
+        {
+            get => placeofbirth;
+            set
+            {
+                placeofbirth = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? MaritalState
+        {
+            get => maritalstate;
+            set
+            {
+                maritalstate = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? Phone
+        {
+            get => phone;
+            set
+            {
+                phone = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? Email
+        {
+            get => email;
+            set
+            {
+                email = value;
+                OnPropertyChanged();
+            }
+        }
+        public string? CurrentPlace
+        {
+            get => currentplace;
+            set
+            {
+                currentplace = value;
+                OnPropertyChanged();
+            }
+        }
 
         [JsonIgnore]
         public ImageSource? ImageSource
@@ -50,7 +136,7 @@ namespace ProjectGenerateCVWPF.Data
                 if (imageSource != value)
                 {
                     imageSource = value;
-                    OnPropertyChanged(nameof(ImageSource)); // Notify change for ImageSource
+                    OnPropertyChanged(); // Notify change for ImageSource
                 }
             }
         }
@@ -62,13 +148,35 @@ namespace ProjectGenerateCVWPF.Data
                 if (imagePath != value)
                 {
                     imagePath = value;
-                    OnPropertyChanged(nameof(ImagePath)); // Notify change for ImagePath
+                    OnPropertyChanged(); // Notify change for ImagePath
                     UpdateImageSource(); // Update ImageSource when ImagePath changes
                 }
             }
         }
-        public bool? IsProfileVisible { get; set; } = false;
-        public bool? IsReferenceVisible { get; set; } = true;
+        public bool? IsProfileVisible
+        {
+            get => isprofilevisible;
+            set
+            {
+                isprofilevisible = value;
+                OnPropertyChanged();
+            }
+        }
+        public bool? IsReferenceVisible
+        {
+            get => isreferencevisible;
+            set
+            {
+                isreferencevisible = value;
+                OnPropertyChanged();
+            }
+        }
+
+        [OnDeserialized]
+        private void OnDeserialized(StreamingContext context)
+        {
+            UpdateImageSource();
+        }
 
         private void UpdateImageSource()
         {
@@ -82,16 +190,9 @@ namespace ProjectGenerateCVWPF.Data
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         public ProfileInformation()
         {
-            UpdateImageSource(); 
+            //UpdateImageSource(); 
         }
     }
 }

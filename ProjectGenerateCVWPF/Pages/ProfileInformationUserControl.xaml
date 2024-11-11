@@ -121,7 +121,10 @@
                         BorderBrush="Gray"
                         BorderThickness="0.5">
                         <Border.Background>
-                            <ImageBrush ImageSource="{Binding Profile.ImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill" AlignmentY="Top"/>
+                            <ImageBrush
+                                AlignmentY="Top"
+                                ImageSource="{Binding Profile.ImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                Stretch="UniformToFill" />
                         </Border.Background>
                     </Border>
                     <StackPanel Orientation="Horizontal">
@@ -190,6 +193,7 @@
                         FontWeight="Light"
                         Text="Position" />
                     <TextBox
+                        Margin="7,4"
                         Style="{StaticResource tbPosition}"
                         Tag="Position"
                         Text="{Binding Profile.Position, UpdateSourceTrigger=PropertyChanged}" />
@@ -205,7 +209,7 @@
                         Tag="Date of Birth"
                         Text="{Binding Profile.DateofBirth, UpdateSourceTrigger=PropertyChanged}" />-->
                     <DatePicker
-                        Margin="0,5"
+                        Margin="5,5"
                         Padding="9"
                         FontSize="14"
                         IsTodayHighlighted="True"

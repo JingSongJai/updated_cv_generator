@@ -49,7 +49,7 @@
             <Border.Background>
                 <ImageBrush
                     AlignmentY="Top"
-                    ImageSource="{Binding Profile.ImagePath}"
+                    ImageSource="{Binding Profile.ImageSource}"
                     Stretch="UniformToFill" />
             </Border.Background>
         </Border>

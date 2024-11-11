@@ -45,6 +45,7 @@
     <None Remove="Images\phone.png" />
     <None Remove="Images\position.png" />
     <None Remove="Images\profile.png" />
+    <None Remove="Images\rathana.jpg" />
     <None Remove="Images\reference.png" />
     <None Remove="Images\relationship.png" />
     <None Remove="Images\skills.png" />
@@ -176,6 +177,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\profile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\rathana.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\reference.png">

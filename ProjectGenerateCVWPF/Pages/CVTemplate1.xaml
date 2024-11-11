@@ -334,7 +334,7 @@
                         <ImageBrush
                             x:Name="image"
                             AlignmentY="Top"
-                            ImageSource="{Binding Profile.ImageSource}"
+                            ImageSource="{Binding Profile.ImageSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                             Stretch="UniformToFill" />
                     </Border.Background>
                 </Border>
