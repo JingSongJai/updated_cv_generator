@@ -68,6 +68,10 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
 
@@ -103,6 +107,17 @@
                         <ComboBoxItem Content="Times New Roman" />
                         <ComboBoxItem Content="Verdana" />
                     </ComboBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <TextBlock
+                        Padding="10"
+                        VerticalAlignment="Center"
+                        FontSize="15"
+                        Text="CornerRadius : " />
+                    <materialDesign:NumericUpDown Value="{Binding CornerRadius, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                             Width="200"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

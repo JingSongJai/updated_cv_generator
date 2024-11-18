@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="424"
     Height="600"
@@ -31,7 +32,10 @@
             Width="120"
             Height="130">
             <Border.Background>
-                <ImageBrush ImageSource="{Binding Profile.ImageSource}" Stretch="UniformToFill" AlignmentY="Top"/>
+                <ImageBrush
+                    AlignmentY="Top"
+                    ImageSource="{Binding Profile.ImageSource}"
+                    Stretch="UniformToFill" />
             </Border.Background>
         </Border>
 
@@ -71,7 +75,7 @@
                 Foreground="#3c406f"
                 Style="{StaticResource descText1}"
                 Text="{Binding Profile.AboutMe}"
-                TextAlignment="Justify"/>
+                TextAlignment="Justify" />
 
             <!--  Contact  -->
 
@@ -90,12 +94,12 @@
                     Text="CONTACT" />
             </Border>
 
-            <StackPanel Grid.Row="3" Margin="10,0,0,0">
+            <StackPanel Grid.Row="3" Margin="5,0,0,0">
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="15"
+                    <materialDesign:PackIcon
                         Margin="5,0"
-                        Source="/Images/phone (2).png" />
+                        Foreground="#3c406f"
+                        Kind="Phone" />
                     <TextBlock
                         x:Name="txtPhone"
                         Width="120"
@@ -105,10 +109,10 @@
                         Text="{Binding Profile.Phone}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="15"
+                    <materialDesign:PackIcon
                         Margin="5,0"
-                        Source="/Images/email (2).png" />
+                        Foreground="#3c406f"
+                        Kind="Email" />
                     <TextBlock
                         x:Name="txtEmail"
                         Width="120"
@@ -118,11 +122,10 @@
                         Text="{Binding Profile.Email}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Image
-                        Width="15"
+                    <materialDesign:PackIcon
                         Margin="5,0"
-                        VerticalAlignment="Top"
-                        Source="/Images/location (2).png" />
+                        Foreground="#3c406f"
+                        Kind="Location" />
                     <TextBlock
                         x:Name="txtLocation"
                         Width="120"
@@ -171,7 +174,7 @@
                 ItemsSource="{Binding Skills}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="7,-7,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="2,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Margin="5,0"
                                 FontSize="8"
@@ -214,7 +217,7 @@
                 ItemsSource="{Binding Languages}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="10,-7,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="5,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Width="60"
                                 Foreground="#3c406f"
@@ -260,7 +263,7 @@
                 Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="5,-7,0,0">
+                        <StackPanel Margin="0,-7,0,0">
                             <TextBlock
                                 Width="110"
                                 FontWeight="SemiBold"
@@ -277,13 +280,49 @@
                             <TextBlock
                                 Width="110"
                                 Foreground="#3c406f"
-                                Style="{DynamicResource descText2}"
-                                Text="{Binding Email}" />
+                                Text="{Binding Email}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="FontFamily" Value="{DynamicResource CV Font}" />
+                                        <Setter Property="FontSize" Value="9" />
+                                        <Setter Property="FontWeight" Value="Light" />
+                                        <Setter Property="Foreground" Value="{Binding Foregroud, RelativeSource={RelativeSource AncestorType=TextBlock}}" />
+                                        <Setter Property="TextWrapping" Value="Wrap" />
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Email}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Email}" Value="{x:Null}">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                             <TextBlock
                                 Width="110"
                                 Foreground="#3c406f"
-                                Style="{DynamicResource descText2}"
-                                Text="{Binding Phone}" />
+                                Text="{Binding Phone}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="FontFamily" Value="{DynamicResource CV Font}" />
+                                        <Setter Property="FontSize" Value="9" />
+                                        <Setter Property="FontWeight" Value="Light" />
+                                        <Setter Property="Foreground" Value="{Binding Foregroud, RelativeSource={RelativeSource AncestorType=TextBlock}}" />
+                                        <Setter Property="TextWrapping" Value="Wrap" />
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Phone}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Phone}" Value="{x:Null}">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -337,7 +376,7 @@
                     CornerRadius="10 0 0 10">
                     <TextBlock
                         Margin="0,3"
-                        Padding="5,0"
+                        Padding="7,0"
                         FontSize="12"
                         Foreground="White"
                         Style="{DynamicResource headerText2}"
@@ -406,7 +445,7 @@
                 CornerRadius="10 0 0 10">
                 <TextBlock
                     Margin="0,3"
-                    Padding="5,0,0,0"
+                    Padding="7,0,0,0"
                     FontSize="12"
                     Foreground="White"
                     Style="{DynamicResource headerText2}"
@@ -464,7 +503,7 @@
                 CornerRadius="10 0 0 10">
                 <TextBlock
                     Margin="0,3"
-                    Padding="5,0,0,0"
+                    Padding="7,0,0,0"
                     FontSize="12"
                     Foreground="White"
                     Style="{DynamicResource headerText2}"

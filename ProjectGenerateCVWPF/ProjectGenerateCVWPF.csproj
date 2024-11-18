@@ -23,6 +23,7 @@
     <None Remove="Images\ant.jpg" />
     <None Remove="Images\calender.png" />
     <None Remove="Images\cbrd.png" />
+    <None Remove="Images\chamnan.jpg" />
     <None Remove="Images\company.png" />
     <None Remove="Images\cv_icon.ico" />
     <None Remove="Images\cv_images.png" />
@@ -41,6 +42,7 @@
     <None Remove="Images\name.png" />
     <None Remove="Images\nationality.png" />
     <None Remove="Images\person.jpg" />
+    <None Remove="Images\phanith.jpg" />
     <None Remove="Images\phone %282%29.png" />
     <None Remove="Images\phone.png" />
     <None Remove="Images\position.png" />
@@ -48,7 +50,9 @@
     <None Remove="Images\rathana.jpg" />
     <None Remove="Images\reference.png" />
     <None Remove="Images\relationship.png" />
+    <None Remove="Images\save_profile.ico" />
     <None Remove="Images\skills.png" />
+    <None Remove="Images\soklei.jpg" />
     <None Remove="Images\song.jpg" />
     <None Remove="Images\subject.png" />
     <None Remove="Images\telegram.png" />
@@ -113,6 +117,9 @@
     <Resource Include="Images\cbrd.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\chamnan.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\company.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -155,6 +162,9 @@
     <Resource Include="Images\person.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\phanith.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\phone (2).png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -188,7 +198,13 @@
     <Resource Include="Images\relationship.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\save_profile.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\skills.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\soklei.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\song.jpg">

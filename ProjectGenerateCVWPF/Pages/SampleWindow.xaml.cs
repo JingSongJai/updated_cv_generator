@@ -50,7 +50,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (index != 15)
+            if (index != 16)
             {
                 index++;
                 changeTemplate();
@@ -137,6 +137,10 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                 case "Template15":
                     tmp = new CVTemplate15();
+                    tmp.DataContext = App.sampleViewModel;
+                    break;
+                case "Template16":
+                    tmp = new CVTemplate16();
                     tmp.DataContext = App.sampleViewModel;
                     break;
             }

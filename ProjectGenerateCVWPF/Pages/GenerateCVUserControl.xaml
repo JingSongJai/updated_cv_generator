@@ -211,11 +211,11 @@
                         x:Name="settings"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
-                        <fa:ImageAwesome
+                        <materialDesign:PackIcon
                             Width="25"
                             Height="25"
-                            Icon="Gear"
-                            Style="{StaticResource imageMenu}" />
+                            Kind="Settings"
+                            Style="{StaticResource menuIcon}" />
                     </RadioButton>-->
                 </StackPanel>
                 <Border
@@ -283,6 +283,7 @@
                                 <ComboBoxItem Content="Template13" />
                                 <ComboBoxItem Content="Template14" />
                                 <ComboBoxItem Content="Template15" />
+                                <ComboBoxItem Content="Template16" />
                             </ComboBox>
                             <TextBlock
                                 Padding="10"

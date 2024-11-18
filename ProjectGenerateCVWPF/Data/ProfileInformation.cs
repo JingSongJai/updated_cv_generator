@@ -81,6 +81,7 @@ namespace ProjectGenerateCVWPF.Data
                 OnPropertyChanged();
             }
         }
+        
         public string? PlaceofBirth
         {
             get => placeofbirth;
@@ -136,10 +137,11 @@ namespace ProjectGenerateCVWPF.Data
                 if (imageSource != value)
                 {
                     imageSource = value;
-                    OnPropertyChanged(); // Notify change for ImageSource
+                    OnPropertyChanged(); 
                 }
             }
         }
+
         public string? ImagePath
         {
             get { return imagePath; }
@@ -148,8 +150,8 @@ namespace ProjectGenerateCVWPF.Data
                 if (imagePath != value)
                 {
                     imagePath = value;
-                    OnPropertyChanged(); // Notify change for ImagePath
-                    UpdateImageSource(); // Update ImageSource when ImagePath changes
+                    OnPropertyChanged();
+                    UpdateImageSource();
                 }
             }
         }

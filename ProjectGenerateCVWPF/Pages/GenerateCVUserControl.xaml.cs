@@ -31,8 +31,8 @@ namespace ProjectGenerateCVWPF.Pages
         {
             InitializeComponent();
 
-            setDataContexttoPages(); 
             panelDisplay.Children.Add(profilePage);
+            setDataContexttoPages(); 
 
             getProfiles(); 
         }
@@ -119,7 +119,7 @@ namespace ProjectGenerateCVWPF.Pages
             return renderBitmap;
         }
 
-        public static async Task<BitmapSource> RenderControlToBitmapAsync(FrameworkElement control, double dpiX = 300, double dpiY = 300)
+        public static async Task<BitmapSource> RenderControlToBitmapAsync(FrameworkElement control, double dpiX = 1300, double dpiY = 1300)
         {
             if (control == null) return null;
 
@@ -301,7 +301,14 @@ namespace ProjectGenerateCVWPF.Pages
                     template15.DataContext = vm;
                     //App.maxSkill = template1.maxSkill; 
                     break;
-
+                case "Template16": 
+                    CVTemplate16 template16 = new CVTemplate16();
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(template16);
+                    template16.DataContext = vm;
+                    //App.maxSkill = template1.maxSkill; 
+                    break;
+                
             }
         }
 
@@ -390,8 +397,12 @@ namespace ProjectGenerateCVWPF.Pages
                 case "Template15":
                     panelCVDisplay.Children.Clear();
                     panelCVDisplay.Children.Add(new CVTemplate15() { DataContext = vm });
-                    break; 
-
+                    break;
+                case "Template16":
+                    panelCVDisplay.Children.Clear();
+                    panelCVDisplay.Children.Add(new CVTemplate16() { DataContext = vm });
+                    break;
+                    
             }
         }
 
@@ -477,6 +488,7 @@ namespace ProjectGenerateCVWPF.Pages
 
             vm = JsonSerializer.Deserialize<ViewModel>(jsonString);
             (panelCVDisplay.Children[0] as Control).DataContext = vm;
+
             setDataContexttoPages();
             profile.IsChecked = true; 
             profile_Click(profile, null); 

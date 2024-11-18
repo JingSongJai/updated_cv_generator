@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ProjectGenerateCVWPF.Pages"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="424"
     Height="600"
@@ -94,10 +95,10 @@
 
                 <StackPanel Grid.Row="4">
                     <StackPanel Orientation="Horizontal">
-                        <Image
-                            Width="15"
-                            Margin="5,3"
-                            Source="/Images/phone.png" />
+                        <materialDesign:PackIcon
+                            Margin="5,0"
+                            Foreground="White"
+                            Kind="Phone" />
                         <TextBlock
                             x:Name="txtPhone"
                             Width="100"
@@ -107,10 +108,10 @@
                             Text="{Binding Profile.Phone}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Image
-                            Width="15"
-                            Margin="5,3"
-                            Source="/Images/email.png" />
+                        <materialDesign:PackIcon
+                            Margin="5,0"
+                            Foreground="White"
+                            Kind="Email" />
                         <TextBlock
                             x:Name="txtEmail"
                             Width="100"
@@ -120,11 +121,10 @@
                             Text="{Binding Profile.Email}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Image
-                            Width="15"
-                            Margin="5,3"
-                            VerticalAlignment="Top"
-                            Source="/Images/location.png" />
+                        <materialDesign:PackIcon
+                            Margin="5,0"
+                            Foreground="White"
+                            Kind="Location" />
                         <TextBlock
                             x:Name="txtLocation"
                             Width="100"
@@ -295,7 +295,7 @@
                     Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="0,-10,0,0">
+                            <StackPanel Margin="0,-7,0,0">
                                 <TextBlock
                                     Width="110"
                                     FontWeight="SemiBold"
@@ -314,13 +314,49 @@
                                     Width="110"
                                     Margin="0,0,0,2"
                                     Foreground="White"
-                                    Style="{DynamicResource descText2}"
-                                    Text="{Binding Email}" />
+                                    Text="{Binding Email}">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="FontFamily" Value="{DynamicResource CV Font}" />
+                                            <Setter Property="FontSize" Value="9" />
+                                            <Setter Property="FontWeight" Value="Light" />
+                                            <Setter Property="Foreground" Value="{Binding Foregroud, RelativeSource={RelativeSource AncestorType=TextBlock}}" />
+                                            <Setter Property="TextWrapping" Value="Wrap" />
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Email}" Value="">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Email}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                                 <TextBlock
                                     Width="110"
                                     Foreground="White"
-                                    Style="{DynamicResource descText2}"
-                                    Text="{Binding Phone}" />
+                                    Text="{Binding Phone}">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="FontFamily" Value="{DynamicResource CV Font}" />
+                                            <Setter Property="FontSize" Value="9" />
+                                            <Setter Property="FontWeight" Value="Light" />
+                                            <Setter Property="Foreground" Value="{Binding Foregroud, RelativeSource={RelativeSource AncestorType=TextBlock}}" />
+                                            <Setter Property="TextWrapping" Value="Wrap" />
+                                            <Setter Property="Visibility" Value="Visible" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Phone}" Value="">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding Phone}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -372,7 +408,7 @@
                 </StackPanel>
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Date of Birth  :  " />
-                    <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                    <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.DateofBirth, StringFormat=dd/MMMM/yyyy}" />
                 </StackPanel>
                 <StackPanel Margin="0,2" Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Place of Birth :  " />
@@ -461,7 +497,7 @@
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,-4">
                             <StackPanel
-                                Width="250"
+                                Width="245"
                                 Margin="0,-6,0,0"
                                 Orientation="Horizontal">
                                 <TextBlock

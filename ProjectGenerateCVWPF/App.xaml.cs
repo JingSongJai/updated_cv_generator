@@ -37,8 +37,9 @@ namespace ProjectGenerateCVWPF
                     //    "Male",
                     //    "Female"
                     //},
+                    DateofBirth = DateTime.Parse("01/12/2003"),
                     PlaceofBirth = "Prey Veng Commune, Prey Veng District, Prey Veng Province",
-                    MaritalState = "Married",
+                    MaritalState = "Single",
                     ImageSource = new Helper() { imagePath = "pack://application:,,,/Images/makara.jpg" }.CopyImage(),
                     IsProfileVisible = true,
                     AboutMe = "Aspiring mobile developer with skills in C#, C++, and Java, focused on Flutter. Passionate about user-friendly, efficient apps. Currently studying IT, eager to apply skills in impactful real-world projects."
@@ -130,13 +131,13 @@ namespace ProjectGenerateCVWPF
                 Email = "Email: malis.phanith@techbright.com"
             });
 
-            sampleViewModel.References.Add(new Data.References()
-            {
-                Name = "Visal Sok",
-                Company = "InnovateX/Project Manager",
-                Phone = "Phone: 023-456-7890",
-                Email = "Email: visal.sok@innovatex.com"
-            });
+            //sampleViewModel.References.Add(new Data.References()
+            //{
+            //    Name = "Visal Sok",
+            //    Company = "InnovateX/Project Manager",
+            //    Phone = "Phone: 023-456-7890",
+            //    Email = "Email: visal.sok@innovatex.com"
+            //});
 
             //Pages.SplashScreen sc = new Pages.SplashScreen();
             //sc.Show();

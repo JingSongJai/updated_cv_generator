@@ -15,7 +15,8 @@
     Loaded="Window_Loaded"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Icon="/Images/save_profile.ico">
     <Window.Resources>
         <Style x:Key="btnSave" TargetType="Button">
             <Setter Property="FontFamily" Value="{StaticResource Segoe UI}" />
@@ -109,7 +110,8 @@
                 Height="40"
                 Margin="20,0"
                 Style="{StaticResource tbReference}"
-                Tag="Profile Name" />
+                Tag="Profile Name" 
+                TextChanged="tbProfileName_TextChanged"/>
             <TextBlock x:Name="txtMessage"
                        Style="{StaticResource descText1}"
                        Foreground="{StaticResource btnColor4}"

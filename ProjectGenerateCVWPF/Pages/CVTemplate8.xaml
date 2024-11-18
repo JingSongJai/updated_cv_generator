@@ -421,14 +421,14 @@
                                     Text="{Binding EndYear}" />
                             </StackPanel>
                             <TextBlock
-                                Width="225"
+                                Width="220"
                                 Margin="-7,0,0,0"
                                 FontStyle="Italic"
                                 Foreground="#636c75"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Responsibility}" />
                             <TextBlock
-                                Width="225"
+                                Width="220"
                                 Margin="-7,0,0,2"
                                 Foreground="#636c75"
                                 Style="{DynamicResource descText2}"
@@ -491,13 +491,49 @@
                                 Width="100"
                                 Margin="0,0,0,2"
                                 Foreground="#636c75"
-                                Style="{DynamicResource descText2}"
-                                Text="{Binding Email}" />
+                                Text="{Binding Email}" >
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="FontFamily" Value="{DynamicResource CV Font}" />
+                                        <Setter Property="FontSize" Value="9" />
+                                        <Setter Property="FontWeight" Value="Light" />
+                                        <Setter Property="Foreground" Value="{Binding Foregroud, RelativeSource={RelativeSource AncestorType=TextBlock}}" />
+                                        <Setter Property="TextWrapping" Value="Wrap" />
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Email}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Email}" Value="{x:Null}">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                             <TextBlock
                                 Width="100"
                                 Foreground="#636c75"
-                                Style="{DynamicResource descText2}"
-                                Text="{Binding Phone}" />
+                                Text="{Binding Phone}" >
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="FontFamily" Value="{DynamicResource CV Font}" />
+                                        <Setter Property="FontSize" Value="9" />
+                                        <Setter Property="FontWeight" Value="Light" />
+                                        <Setter Property="Foreground" Value="{Binding Foregroud, RelativeSource={RelativeSource AncestorType=TextBlock}}" />
+                                        <Setter Property="TextWrapping" Value="Wrap" />
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Phone}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Phone}" Value="{x:Null}">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

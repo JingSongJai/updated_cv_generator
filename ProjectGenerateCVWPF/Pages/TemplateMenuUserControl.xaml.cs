@@ -41,6 +41,7 @@ namespace ProjectGenerateCVWPF.Pages
             templates.Add(new string[] { "Template13", "pack://application:,,,/Images/cv_template.png" });
             templates.Add(new string[] { "Template14", "pack://application:,,,/Images/cv_template.png" });
             templates.Add(new string[] { "Template15", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template16", "pack://application:,,,/Images/cv_template.png" });
 
             foreach(string[] template in templates)
             {
@@ -128,6 +129,11 @@ namespace ProjectGenerateCVWPF.Pages
                     tmp = new CVTemplate15();
                     tmp.DataContext = App.sampleViewModel; 
                     break;
+                case "Template16":
+                    tmp = new CVTemplate16();
+                    tmp.DataContext = App.sampleViewModel;
+                    break;
+
             }
             return tmp;
         }

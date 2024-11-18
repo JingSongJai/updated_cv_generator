@@ -372,13 +372,14 @@
                                     Text="{Binding EndYear}" />
                             </StackPanel>
                             <TextBlock
+                                Width="250"
                                 Margin="-5,0,0,0"
                                 FontStyle="Italic"
                                 Foreground="#404040"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Responsibility}" />
                             <TextBlock
-                                Width="255"
+                                Width="250"
                                 Margin="-5,0,0,2"
                                 Foreground="#404040"
                                 Style="{DynamicResource descText2}"
