@@ -221,7 +221,7 @@
                 ItemsSource="{Binding Skills}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="7,-10,0,-5" Orientation="Horizontal">
+                        <StackPanel Margin="7,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Margin="5,0"
                                 FontSize="8"
@@ -398,7 +398,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,-7,0,-4">
+                        <StackPanel Margin="-2,-7,0,-4">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Width="165"
@@ -472,7 +472,7 @@
                 </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="-5,-7,0,0">
+                        <StackPanel Margin="-4,-7,0,0">
                             <TextBlock
                                 Width="100"
                                 FontWeight="SemiBold"

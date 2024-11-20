@@ -172,16 +172,15 @@
                     ItemsSource="{Binding Skills}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Margin="0,-10,0,0" Orientation="Horizontal">
+                            <StackPanel Margin="0,-7,0,0" Orientation="Horizontal">
                                 <TextBlock
-                                    Margin="5,2"
+                                    Margin="5,0"
                                     FontSize="8"
                                     Foreground="White"
                                     Text="●"
                                     TextAlignment="Center" />
                                 <TextBlock
                                     Width="100"
-                                    Margin="0,2"
                                     Foreground="White"
                                     Style="{StaticResource descText1}"
                                     Text="{Binding Name}" />
@@ -516,7 +515,7 @@
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding Responsibility}" />
                             <TextBlock
-                                Width="255"
+                                Width="250"
                                 Margin="-5,0,0,2"
                                 Style="{DynamicResource descText2}"
                                 Text="{Binding JobDescription}" />

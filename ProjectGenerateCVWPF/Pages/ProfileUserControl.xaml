@@ -10,7 +10,7 @@
     Background="Transparent"
     Loaded="UserControl_Loaded"
     mc:Ignorable="d">
-    <Border Background="{StaticResource displayBackground}" CornerRadius="15">
+    <Border Background="{StaticResource displayBackground}" CornerRadius="15 0 15 0">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />

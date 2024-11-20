@@ -413,7 +413,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,-7,0,-4">
+                        <StackPanel Margin="-2,-7,0,-4">
                             <StackPanel Width="225" Orientation="Horizontal">
                                 <TextBlock
                                     Width="160"

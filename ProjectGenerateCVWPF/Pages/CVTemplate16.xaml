@@ -256,7 +256,8 @@
             <StackPanel
                 Grid.Row="7"
                 Margin="0,5"
-                VerticalAlignment="Bottom">
+                VerticalAlignment="Bottom"
+                Visibility="{Binding Profile.IsReferenceVisible, Converter={StaticResource isVisible}}">
                 <Border
                     Height="25"
                     Background="White"

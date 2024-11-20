@@ -10,6 +10,15 @@
     d:DesignWidth="985"
     Background="Transparent"
     mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style x:Key="image" TargetType="Image">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Border
         Padding="10"
         Background="{StaticResource displayBackground}"
@@ -24,8 +33,8 @@
             <Border
                 Grid.Row="1"
                 Width="450"
-                Height="320"
-                Margin="0 50 0 0"
+                Height="350"
+                Margin="0,40,0,0"
                 VerticalAlignment="Center"
                 Background="White"
                 BorderBrush="Gray"
@@ -46,31 +55,57 @@
                     FontSize="20"
                     FontWeight="Light"
                     Text="Team 5" />
+                <StackPanel
+                    Margin="0,80,0,10"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+                    <Image
+                        Width="50"
+                        Margin="30,0"
+                        VerticalAlignment="Top"
+                        MouseDown="Image_MouseDown"
+                        Source="/Images/mptc.png" />
+                    <Image
+                        Width="130"
+                        Margin="30,0"
+                        VerticalAlignment="Top"
+                        MouseDown="Image_MouseDown_1"
+                        Source="/Images/cbrd.png" />
+                    <Image
+                        Height="50"
+                        Margin="30,5,0,0"
+                        MouseDown="Image_MouseDown_2"
+                        Source="/Images/ant.jpg" />
+                </StackPanel>
+                <Border
+                    Height="0.2"
+                    Margin="80,0"
+                    Background="Gray" />
                 <TextBlock
                     Width="420"
-                    Margin="0 95 0 10"
+                    Margin="0,30,0,10"
                     VerticalAlignment="Top"
                     FontFamily="{StaticResource Poppins}"
                     FontSize="15"
                     FontWeight="Light"
                     Foreground="Black"
-                    Text="We are recipients of the scholarship program at [1] ANT Technology Training Center, focusing on mobile application development over an 11-month period, starting from 20 February 2024 to December 2024."
+                    Text="We are recipients of the scholarship program at ANT Technology Training Center, focusing on mobile application development over an 11-month period, starting from 20 February 2024 to December 2024."
                     TextAlignment="Justify"
                     TextWrapping="Wrap" />
                 <TextBlock
                     Width="420"
-                    Margin="0 0 0 10"
+                    Margin="0,0,0,10"
                     VerticalAlignment="Top"
                     FontFamily="{StaticResource Poppins}"
                     FontSize="15"
                     FontWeight="Light"
                     Foreground="Black"
-                    Text="We are deeply grateful for the generous support provided by the [2] Ministry of Post and Telecommunications."
+                    Text="We are deeply grateful for the generous support provided by the Ministry of Post and Telecommunications."
                     TextAlignment="Justify"
                     TextWrapping="Wrap" />
                 <TextBlock
                     Width="420"
-                    Margin="0 0 0 30"
+                    Margin="0,0,0,30"
                     VerticalAlignment="Top"
                     FontFamily="{StaticResource Poppins}"
                     FontSize="15"
@@ -79,26 +114,8 @@
                     Text="This opportunity has allowed us to expand our knowledge and enhance our skills to a higher level. This project marks the culmination of our C# course."
                     TextAlignment="Justify"
                     TextWrapping="Wrap" />
-                
-                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Image
-                        Width="50"
-                        Margin="20,0"
-                        VerticalAlignment="Top"
-                        MouseDown="Image_MouseDown"
-                        Source="/Images/mptc.png" />
-                    <Image
-                        Width="130"
-                        Margin="20,0"
-                        VerticalAlignment="Top"
-                        MouseDown="Image_MouseDown_1"
-                        Source="/Images/cbrd.png" />
-                    <Image
-                        Height="50"
-                        Margin="20,5,0,0"
-                        MouseDown="Image_MouseDown_2"
-                        Source="/Images/ant.jpg" />
-                </StackPanel>
+
+
             </StackPanel>
             <Border
                 Grid.Column="1"

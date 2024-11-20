@@ -32,7 +32,6 @@ namespace ProjectGenerateCVWPF.Pages
             
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Phen Makara", Position = "Member", ImagePath = "pack://application:,,,/Images/makara.jpg", Url = "https://web.facebook.com/phen.makara.562" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sreang Rathana", Position = "Member", ImagePath = "pack://application:,,,/Images/rathana.jpg", Url = "https://web.facebook.com/xxxboobziee" }); 
-            panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Sinh Porsou", Position = "Member", ImagePath = "pack://application:,,,/Images/default_photo.jpg", Url = "https://web.facebook.com/profile.php?id=61556172153659" }); 
             panelDisplay1.Children.Add(new ImageDisplayUserControl() { Title = "Taing ChingSong", Position = "Member", ImagePath = "pack://application:,,,/Images/song.jpg", Url = "https://web.facebook.com/profile.php?id=100093239088732" }); 
         }
 
@@ -49,7 +48,7 @@ namespace ProjectGenerateCVWPF.Pages
         {
             Process.Start(new ProcessStartInfo
             {
-                FileName = "https://mptc.gov.kh/en/",
+                FileName = "https://cbrd.gov.kh/",
                 UseShellExecute = true
             });
         }

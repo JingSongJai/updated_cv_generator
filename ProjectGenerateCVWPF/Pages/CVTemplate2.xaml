@@ -128,7 +128,7 @@
                 ItemsSource="{Binding Skills}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Margin="0,-10,0,0" Orientation="Horizontal">
+                        <StackPanel Margin="0,-7,0,0" Orientation="Horizontal">
                             <TextBlock
                                 FontSize="7"
                                 Foreground="{StaticResource cvText3}"
@@ -304,6 +304,7 @@
             <!--  About Me  -->
 
             <TextBlock
+                Margin="3 0 0 0" 
                 Grid.Row="1"
                 Width="220"
                 HorizontalAlignment="Left"
@@ -330,7 +331,7 @@
                             TextAlignment="Center" />
                     </Border>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="3 0 0 0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -340,7 +341,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Nationality}" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="3 0 0 0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -350,7 +351,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Gender}" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="3 0 0 0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -360,7 +361,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="3 0 0 0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
@@ -371,7 +372,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="3 0 0 0" Orientation="Horizontal">
                     <TextBlock
                         Foreground="{StaticResource cvText3}"
                         Style="{DynamicResource headerText2}"
