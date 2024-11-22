@@ -251,12 +251,10 @@
                         <StackPanel Margin="5,-7,0,-5" Orientation="Horizontal">
                             <TextBlock
                                 Width="60"
-                                Margin="0,2"
                                 Foreground="Black"
                                 Style="{StaticResource descText1}"
                                 Text="{Binding Name}" />
                             <TextBlock
-                                Margin="0,2"
                                 Foreground="Black"
                                 Style="{StaticResource descText1}"
                                 Text="{Binding Level}" />

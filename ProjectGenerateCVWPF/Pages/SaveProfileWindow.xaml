@@ -94,7 +94,7 @@
                 VerticalAlignment="Center"
                 FontSize="18"
                 FontWeight="Light"
-                Style="{StaticResource headerText2}"
+                FontFamily="{StaticResource Segoe UI}"
                 Text="Save Profile" />
             <Button
                 Grid.Column="1"

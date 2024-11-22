@@ -186,9 +186,10 @@ namespace ProjectGenerateCVWPF.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            App.Current.Resources["CV Font"] = new FontFamily(new Uri("pack://application:,,,/"), "Fonts/#Segoe UI");
             App.isAddNewImage = false; 
             App.main.panelDisplay.Children.Clear();
-            App.main.panelDisplay.Children.Add(new TemplateMenuUserControl()); 
+            App.main.panelDisplay.Children.Add(App.templateMenu); 
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)

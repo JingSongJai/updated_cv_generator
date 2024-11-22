@@ -75,6 +75,7 @@ namespace ProjectGenerateCVWPF.Pages
 
         private Control getTemplate(string templateName)
         {
+            App.sampleViewModel.Profile.IsProfileVisible = true;
             Control tmp = new Control();
 
             switch (templateName)
@@ -93,6 +94,7 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                 case "Template4":
                     tmp = new CVTemplate4();
+                    App.sampleViewModel.Profile.IsProfileVisible = false;
                     tmp.DataContext = App.sampleViewModel;
                     break;
                 case "Template5":
@@ -109,6 +111,7 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                 case "Template8":
                     tmp = new CVTemplate8();
+                    App.sampleViewModel.Profile.IsProfileVisible = false;
                     tmp.DataContext = App.sampleViewModel;
                     break;
                 case "Template9":

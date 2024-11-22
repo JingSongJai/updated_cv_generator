@@ -128,7 +128,7 @@ namespace ProjectGenerateCVWPF
                 Name = "Malis Phanith",
                 Company = "TechBright Solutions/CTO",
                 Phone = "Phone: 016-789-1234",
-                Email = "Email: malis.phanith@techbright.com"
+                Email = "Email: example@gmail.com"
             });
 
             //sampleViewModel.References.Add(new Data.References()

@@ -214,7 +214,7 @@
                     Foreground="#404040"
                     Style="{DynamicResource headerText1}"
                     Text="PROFILE" />
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
                         Margin="3 0 0 0"
@@ -225,7 +225,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Nationality}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
                         Margin="3 0 0 0"
@@ -236,7 +236,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.Gender}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
                         Margin="3 0 0 0"
@@ -247,7 +247,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
                         Margin="3 0 0 0"
@@ -259,7 +259,7 @@
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock
                         Foreground="#404040"
                         Margin="3 0 0 0"

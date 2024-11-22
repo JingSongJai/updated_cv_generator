@@ -397,26 +397,26 @@
                     Margin="0,5"
                     Style="{DynamicResource headerText1}"
                     Text="PROFILE" />
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Nationality     :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.Nationality}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Sex                 :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.Gender}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Date of Birth  :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.DateofBirth, StringFormat=dd/MMMM/yyyy}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Place of Birth :  " />
                     <TextBlock
                         Width="190"
                         Style="{DynamicResource headerText2}"
                         Text="{Binding Profile.PlaceofBirth}" />
                 </StackPanel>
-                <StackPanel Margin="0,2" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource headerText2}" Text="Marital Status :  " />
                     <TextBlock Style="{DynamicResource headerText2}" Text="{Binding Profile.MaritalState}" />
                 </StackPanel>

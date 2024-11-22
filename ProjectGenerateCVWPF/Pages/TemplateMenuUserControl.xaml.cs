@@ -59,12 +59,14 @@ namespace ProjectGenerateCVWPF.Pages
             string selectedTemplateName = ((TemplateInterfaceUserControl)sender).Title;
             SampleWindow sw = new SampleWindow() { TemplateName = selectedTemplateName };
 
+            sw.panelDisplay.Children.Clear(); 
             sw.panelDisplay.Children.Add(getTemplate(selectedTemplateName));
             sw.ShowDialog(); 
         }
 
         private Control getTemplate(string templateName)
         {
+            App.sampleViewModel.Profile.IsProfileVisible = true;
             Control tmp = new Control();
 
             switch (templateName)
@@ -83,6 +85,7 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                 case "Template4":
                     tmp = new CVTemplate4();
+                    App.sampleViewModel.Profile.IsProfileVisible = false;
                     tmp.DataContext = App.sampleViewModel; 
                     break;
                 case "Template5":
@@ -99,6 +102,7 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                 case "Template8":
                     tmp = new CVTemplate8();
+                    App.sampleViewModel.Profile.IsProfileVisible = false;
                     tmp.DataContext = App.sampleViewModel; 
                     break;
                 case "Template9":
