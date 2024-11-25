@@ -113,7 +113,8 @@
                 Tag="Profile Name" 
                 TextChanged="tbProfileName_TextChanged"/>
             <TextBlock x:Name="txtMessage"
-                       Style="{StaticResource descText1}"
+                       FontFamily="{StaticResource Segoe UI}"
+                       FontWeight="Light"
                        Foreground="{StaticResource btnColor4}"
                        Margin="30 5"
                        FontSize="11"/>

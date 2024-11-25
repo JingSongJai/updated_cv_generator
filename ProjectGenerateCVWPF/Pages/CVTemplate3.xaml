@@ -86,7 +86,7 @@
                         <TextBlock
                             Foreground="{StaticResource cvText3}"
                             Style="{DynamicResource headerText2}"
-                            Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                            Text="{Binding Profile.DateofBirth, StringFormat=dd/MMMM/yyyy}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock

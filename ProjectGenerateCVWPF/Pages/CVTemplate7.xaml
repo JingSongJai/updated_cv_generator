@@ -411,7 +411,7 @@
                     <TextBlock
                         Foreground="#3c406f"
                         Style="{DynamicResource headerText2}"
-                        Text="{Binding Profile.DateofBirth, StringFormat=dd/MM/yyyy}" />
+                        Text="{Binding Profile.DateofBirth, StringFormat=dd/MMMM/yyyy}" />
                 </StackPanel>
                 <StackPanel Margin="5,0,0,0" Orientation="Horizontal">
                     <TextBlock
