@@ -26,22 +26,22 @@ namespace ProjectGenerateCVWPF.Pages
             InitializeComponent();
             List<string[]> templates = new List<string[]>();
 
-            templates.Add(new string[] { "Template1", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template2", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template3", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template4", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template5", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template6", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template7", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template8", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template9", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template10", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template11", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template12", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template13", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template14", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template15", "pack://application:,,,/Images/cv_template.png" });
-            templates.Add(new string[] { "Template16", "pack://application:,,,/Images/cv_template.png" });
+            templates.Add(new string[] { "Template1", "pack://application:,,,/Images/1.png" });
+            templates.Add(new string[] { "Template2", "pack://application:,,,/Images/2.png" });
+            templates.Add(new string[] { "Template3", "pack://application:,,,/Images/3.png" });
+            templates.Add(new string[] { "Template4", "pack://application:,,,/Images/4.png" });
+            templates.Add(new string[] { "Template5", "pack://application:,,,/Images/5.png" });
+            templates.Add(new string[] { "Template6", "pack://application:,,,/Images/6.png" });
+            templates.Add(new string[] { "Template7", "pack://application:,,,/Images/7.png" });
+            templates.Add(new string[] { "Template8", "pack://application:,,,/Images/8.png" });
+            templates.Add(new string[] { "Template9", "pack://application:,,,/Images/9.png" });
+            templates.Add(new string[] { "Template10", "pack://application:,,,/Images/10.png" });
+            templates.Add(new string[] { "Template11", "pack://application:,,,/Images/11.png" });
+            templates.Add(new string[] { "Template12", "pack://application:,,,/Images/12.png" });
+            templates.Add(new string[] { "Template13", "pack://application:,,,/Images/13.png" });
+            templates.Add(new string[] { "Template14", "pack://application:,,,/Images/14.png" });
+            templates.Add(new string[] { "Template15", "pack://application:,,,/Images/15.png" });
+            templates.Add(new string[] { "Template16", "pack://application:,,,/Images/16.png" });
 
             foreach(string[] template in templates)
             {

@@ -1,8 +1,11 @@
 ﻿using MaterialDesignThemes.Wpf;
+using ProjectGenerateCVWPF.Data;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,7 +24,8 @@ namespace ProjectGenerateCVWPF.Pages
     /// </summary>
     public partial class SettingsUserControl : UserControl
     {
-        
+        public ObservableCollection<ColorInfor> DefaultColor { get; set; }
+
         public SettingsUserControl()
         {
             InitializeComponent();
@@ -37,6 +41,12 @@ namespace ProjectGenerateCVWPF.Pages
             else if (cbFont.SelectedIndex == 5) App.Current.Resources["CV Font"] = new FontFamily(new Uri("pack://application:,,,/"), "Fonts/#Roboto"); 
             else if (cbFont.SelectedIndex == 6) App.Current.Resources["CV Font"] = new FontFamily(new Uri("pack://application:,,,/"), "Fonts/#Times New Roman"); 
             else if (cbFont.SelectedIndex == 7) App.Current.Resources["CV Font"] = new FontFamily(new Uri("pack://application:,,,/"), "Fonts/#Verdana"); 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            colorList.ItemsSource = null; 
+            colorList.ItemsSource = DefaultColor; 
         }
     }
 }

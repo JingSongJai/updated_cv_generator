@@ -202,6 +202,7 @@ namespace ProjectGenerateCVWPF.Pages
                     panelCVDisplay.Children.Clear();
                     panelCVDisplay.Children.Add(template1);
                     template1.DataContext = vm;
+                    //settingsPage.DefaultColor = template1.CVColor; 
                     //App.maxSkill = template1.maxSkill; 
                     break; 
                 case "Template2": 
@@ -311,6 +312,7 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                 
             }
+            settingsPage.DataContext = panelCVDisplay.Children[0];
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
@@ -405,6 +407,7 @@ namespace ProjectGenerateCVWPF.Pages
                     break;
                     
             }
+            settingsPage.DataContext = panelCVDisplay.Children[0];
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

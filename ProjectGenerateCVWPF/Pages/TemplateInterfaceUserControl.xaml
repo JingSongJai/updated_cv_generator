@@ -22,20 +22,18 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Border
-        CornerRadius="10"
-        Style="{StaticResource borderHover}">
+    <Border CornerRadius="10" Style="{StaticResource borderHover}">
         <StackPanel>
             <Border
                 x:Name="imageDisplay"
                 Width="90"
-                Height="100"
+                Height="110"
                 Margin="0,20"
-                CornerRadius="7" />
+                CornerRadius="5" />
             <TextBlock
                 x:Name="txtTitle"
-                FontSize="15"
                 FontFamily="{StaticResource Segoe UI}"
+                FontSize="15"
                 FontWeight="Light"
                 TextAlignment="Center" />
         </StackPanel>

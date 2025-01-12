@@ -207,7 +207,7 @@
                             Kind="TextBox"
                             Style="{StaticResource menuIcon}" />
                     </RadioButton>
-                    <!--<RadioButton
+                    <RadioButton
                         x:Name="settings"
                         Click="profile_Click"
                         Style="{StaticResource cvMenu}">
@@ -216,7 +216,7 @@
                             Height="25"
                             Kind="Settings"
                             Style="{StaticResource menuIcon}" />
-                    </RadioButton>-->
+                    </RadioButton>
                 </StackPanel>
                 <Border
                     Grid.Column="2"

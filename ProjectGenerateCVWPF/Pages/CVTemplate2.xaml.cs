@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ProjectGenerateCVWPF.Data;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ProjectGenerateCVWPF.Pages
 {
@@ -20,9 +11,35 @@ namespace ProjectGenerateCVWPF.Pages
     /// </summary>
     public partial class CVTemplate2 : UserControl
     {
+        public ObservableCollection<ColorInfor> CVColor { get; set; }
+
         public CVTemplate2()
         {
             InitializeComponent();
+
+            CVColor = new ObservableCollection<ColorInfor>()
+            {
+                new ColorInfor()
+                {
+                    Name = "Background1",
+                    ColorBrush = new SolidColorBrush(Color.FromRgb(69, 80, 100))
+                },
+                new ColorInfor()
+                {
+                    Name = "Background2",
+                    ColorBrush = new SolidColorBrush(Color.FromRgb(171, 171, 171))
+                },
+                new ColorInfor()
+                {
+                    Name = "Background3",
+                    ColorBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255))
+                },
+                new ColorInfor()
+                {
+                    Name = "Text1",
+                    ColorBrush = new SolidColorBrush(Color.FromRgb(16, 25, 69))
+                },
+            };
         }
     }
 }
